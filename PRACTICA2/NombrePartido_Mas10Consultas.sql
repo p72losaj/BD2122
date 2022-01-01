@@ -1,5 +1,6 @@
-/** Ejercicio 8: Mostrar el nombre del partido politico en el que se han
-realizado mas de 10 consultas */
+/** Ejercicio 9:
+Mostrar el nombre del partido y el número de consultas realizadas para aquellos partidos que aparecen en más de 10 consultas
+*/
 
 select p.nombrecompleto as "Partido", COUNT(c.idconsulta) as "conteo"
 from partidos p, consultas c, consultas_datos cd

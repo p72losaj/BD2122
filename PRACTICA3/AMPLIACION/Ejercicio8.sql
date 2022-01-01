@@ -14,11 +14,8 @@ HAVING AVG(decode ( v.estudiossuperiores, 'Ninguno',0,'Basicos',1,
 select distinct AVG(
 decode (
 v.estudiossuperiores,'Ninguno',0,'Basicos',1,'Superiores',2,'Doctorado',3,
-v.estudiossuperiores
-)
-)
+v.estudiossuperiores))
 from votantes v, localidades l, provincias p
 where v.localidad = l.idlocalidad 
 and l.provincia = p.idprovincia
-)
-;
+);

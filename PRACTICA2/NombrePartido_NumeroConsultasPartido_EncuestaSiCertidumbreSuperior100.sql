@@ -1,4 +1,5 @@
-/* - Mostrar el nombre de los partidos y el número de consultas realizadas para 
+/* Ejercicio 10
+Mostrar el nombre de los partidos y el número de consultas realizadas para 
 cada partido considerando sólo aquellas consultas en las que el encuestado ha 
 contestado afirmativamente a votar a dicho partido y con una certidumbre por 
 encima del 80%, es decir, 0.8

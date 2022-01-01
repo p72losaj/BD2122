@@ -10,8 +10,7 @@ where c.votante = v.dni and v.situacionlaboral='Activo'
 group by v.nombrecompleto
 HAVING COUNT(c.evento) < (
 select AVG(c.evento) from votantes v, consultas c where c.votante = v.dni
-)
-;
+);
 
 /** Obtener el nombre de los votantes con situacion laboral activo */
 
