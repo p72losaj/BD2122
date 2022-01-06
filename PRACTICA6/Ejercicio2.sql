@@ -16,3 +16,5 @@ begin
 end;
 
 update localidades set numerohabitantes = -5 where idlocalidad = 1;
+
+select* from localidades where idLocalidad = 1;
