@@ -420,7 +420,7 @@ decode ( v.estudiossuperiores, 'Ninguno',0,'Basicos',1,'Superiores',2,'Doctorado
 
 /*
 EJERCICIO 1
-Muestre por pantalla el clasico “Hola mundo”, pero adema?s muestre la fecha 
+Muestre por pantalla el clasico “Hola mundo”, pero ademas muestre la fecha 
 actual.
 */
 
@@ -794,7 +794,6 @@ end;
 /* Practica 6 */
 
 /*
-Ejercicio 1
 Cree una tabla denominada audit_table para almacenar el registro de ejecuciones de los triggers durante la practica.
 Debera tener dos columnas, “datos” y “tabla”, en el campo datos
 almacenara detalles del cambio y el campo tabla almacenara el nombre de la tabla donde ocurrio el cambio.
@@ -802,4 +801,224 @@ almacenara detalles del cambio y el campo tabla almacenara el nombre de la tabla
 
 drop table audit_table;
 
-create table audit_table (datos varchar2(100 bytes),tabla varchar2(100 bytes));
+create table audit_table (datos varchar2(100 byte),tabla varchar2(100 byte));
+
+/*
+Ejercicio 1
+Cree un trigger que guarde los cambios que se produzcan en la columna ‘nombre’ de la tabla ‘eventos’.
+Debera almacenar: ‘NombreAnterior NuevoNombre’
+*/
+
+set serveroutput on
+create or replace trigger tr_1 after update on eventos for each row
+begin
+insert into audit_table (datos,tabla) 
+values (:old.nombre || ' '|| :new.nombre,'eventos');
+end;
+
+/*
+Ejercicio 2
+Implemente un trigger que valide el numero de habitantes de las localidades.
+Si se intenta modificar dicho valor, el numero de habitantes nunca podra ser mayor
+que 4000000 y no podra ser menor que 1. 
+En caso de ocurrir lo anterior debera modificar el valor que se intento insertar,
+y en su lugar debera mantener el valor de la columna.
+*/
+
+set serveroutput on
+create or replace trigger tr_2 before update on localidades for each row
+begin
+if :new.numerohabitantes > 4000000 or :new.numerohabitantes < 0 then
+    :new.numerohabitantes := :old.numerohabitantes;
+end if;
+end;
+
+/*
+Ejercicio 3
+Implemente una funcionalidad que cuando se realicen nuevas consultas (o se modifiquen) a los votantes,
+valide que las nuevas consultas tengan una fecha valida
+(menor o igual que la fecha actual). Ademas, registre
+dicho cambio en la tabla de auditor?a.
+*/
+
+set serveroutput on
+create or replace trigger tr_3 before insert or update on consultas for each row
+begin 
+if :new.fecha > SYSDATE then
+    insert into audit_table (datos,tabla)
+    values ('La fecha ' || :new.fecha || ' no es valida. Se sustituye por ' || SYSDATE,'consultas');
+    :new.fecha := SYSDATE;
+    else insert into audit_table (datos,tabla)
+    values ('La fecha ' || :new.fecha || ' es valida. Se sustituye la fecha ' 
+    || :old.fecha || ' por la fecha ' || :new.fecha, 'consultas');
+end if;
+end;
+
+/*
+Ejercicio 4
+Elabore un procedimiento que no permita que se
+interten numeros de telefono invalidos de los votantes.
+El rango permitido es [600000000, 799999999].
+*/
+
+alter table votantes add constraint ck_ej4 
+check (telefono > = 600000000 and telefono <= 799999999);
+
+/*
+Ejercicio 5
+Restrinja que el tipo de los eventos deban comenzar con letra inicial mayuscula 
+y debe terminar en ‘s’.
+De no cumplirse, debera impedir que se inserte en la
+tabla.
+Primero hay que deshabilitar CK_NOMBRE durante este ejercicio
+*/
+alter table eventos disable constraint CK_NOMBRE;
+
+alter table eventos add constraint ck_ej5 
+check (substr(tipo,1,1) >= 'A' and substr(tipo,1,1) <= 'Z' 
+and tipo like '%s');
+
+alter table eventos enable constraint CK_NOMBRE;
+
+/*
+Ejercicio 6
+Haga una funcionalidad que permita controlar la
+situacion laboral y/o la fecha de nacimiento de los votantes. 
+Si existe un votante que tenga mas de 59 anos
+y aun no esta jubilado, debera quedar registrado su
+DNI en la tabla de control de ejecuciones, as? como de
+cual tabla proviene la informacion.
+*/
+set serveroutput on
+create or replace trigger tr_ej6 before insert or update on votantes for each row
+begin
+if ( (SYSDATE - :new.fechanacimiento) /365) > 59 
+    or :new.situacionlaboral not like 'Jubilado' then
+        insert into audit_table (datos,tabla) 
+        values ('votante con dni ' || :new.dni || ' tiene mas de 59 y no esta jubilado', 'votantes');
+end if;
+end;
+
+/*
+Ejercicio 7
+Implemente una funcionalidad que no permita que
+se inserten direcciones de correo invalidas en la tabla
+VOTANTES. Para que sea una direccion valida debe
+comenzar con una secuencia de caracteres (longitud >
+0), seguido del caracter ‘@’, seguido de una secuencia de caracteres (longitud > 0), luego ‘.’, y finalmente
+una secuencia de caracteres (longitud > 1). 
+Puede asumir que en el caso del caracter ‘.’ solo aparecera como
+maximo en 1 ocasion.
+*/
+
+alter table votantes add constraint ck_7 check(email like '_%@_%._%');
+
+/*
+Ejercicio 8
+Elabore un procedimiento para controlar el tipo de
+correo asociado a los votantes. Para ser considerados
+validos, los correos tendran algunas particularidades.
+La primera esta relacionada con el alias (antes del ‘@’).
+En esta parte el correo debe contar exactamente con
+dos letras ‘a’ (no puede haber menos ni mas). Ademas,
+tras el ‘@’ y antes del ‘.’ se debe contar con una de
+las siguientes extensiones: “uco”, “gmail”, “hotmail”.
+Cualquiera que no sea una de esas extensiones hara
+que el correo se considere invalido. Para finalizar, tras
+el ‘.’ debe existir al menos una letra mas.
+Nota: Cuando se anada el constraint, para que los correos ya introducidos en la tabla
+que no cumplan esta restriccion no den problemas, hay que anadir al final de la l?nea
+‘ENABLE NOVALIDATE’
+*/
+
+alter table votantes add constraint ck_ej8 
+check( (email like '%a%a%@gmail._' or email like '%a%a%@.uco_' or email like '%a%a%@.hotmail_')
+and email not like '%a%a%a%a%') 
+enable novalidate;
+
+/* EXAMEN SQL */
+
+/*
+Ejercicio 1
+Visualizar el numero de votantes de cada localidad con respecto a su situacion laboral.
+Mostrar el numero total de votantes de cada localidad en una columna.
+En las otras debe aparecer el numero total de votantes de dicha localidad segun su situacion laboral:
+parado, activo, estudiante o jubilado
+*/
+
+select l.idlocalidad, count(v.situacionlaboral) as totalVotantes
+, ( select count(v.situacionlaboral)
+    from votantes v, localidades a 
+    where v.localidad = a.idlocalidad and a.idlocalidad = l.idlocalidad 
+    and v.situacionlaboral = 'Parado') as TotalParados
+, ( select count(v.situacionlaboral)
+    from votantes v, localidades a 
+    where v.localidad = a.idlocalidad and a.idlocalidad = l.idlocalidad 
+    and v.situacionlaboral = 'Activo') as TotalActivos
+, ( select count(v.situacionlaboral)
+    from votantes v, localidades a 
+    where v.localidad = a.idlocalidad and a.idlocalidad = l.idlocalidad 
+    and v.situacionlaboral = 'Estudiante') as TotalEstudiantes
+, ( select count(v.situacionlaboral)
+    from votantes v, localidades a 
+    where v.localidad = a.idlocalidad and a.idlocalidad = l.idlocalidad 
+    and v.situacionlaboral = 'Jubilado') as TotalJubilados
+from votantes v, localidades l where v.localidad = l.idlocalidad
+group by l.idlocalidad;
+
+/*
+Ejercicio 2
+Mostrar el nombre de los votantes cuya longitud del primer nombre sea menor
+que el ID de la localidad a la que pertenecen y junto a ella muestra la diferencia
+de edad (en anos) entre la persona mas joven y mas mayor de su localidad.
+[NOTA: en caso de no usar EXTRACT simplemente se restan las fechas y se divide 
+entre 365 y es igual de valido]
+*/
+
+select v.nombrecompleto as "Nombre", 
+(( (select max(a.fechanacimiento) from votantes a where a.localidad = v.localidad)
+- (select min(a.fechanacimiento) from votantes a where a.localidad = v.localidad)
+)/365 )  as Diferencia
+from votantes v
+where length(substr(v.nombrecompleto,1,INSTR(v.nombrecompleto,' '))) < v.localidad
+;
+
+/*
+Ejercicio 3 (ELIMINATORIO)
+Muestra el partido con un mayor numero de consultas.
+Solo se puede usar una vez SELECT,FROM, WHERE y JOIN.
+Resultado: Partido Socialista Obrero Espanol -> 18
+*/
+
+set serveroutput on;
+
+declare
+partido partidos.nombrecompleto%type;
+conteo NUMBER:=0;
+cursor c is select p.nombrecompleto as partido, count(c.consulta) as conteo
+from partidos p, consultas_datos c 
+where p.idpartido = c.partido
+group by p.nombrecompleto;
+begin
+for linea in c loop
+    if linea.conteo >= conteo then 
+        conteo:=linea.conteo;
+        partido:= linea.partido;
+    end if;
+end loop;
+dbms_output.put_line( partido || ' -> ' || conteo);
+end;
+
+/* 
+Ejercicio 4
+Crea una restriccion para que no se inserten email invalidos.
+Los emails de los votantes deben tener antes del @ uno o mas caracteres.
+Entre el @ y el . debe haber uno o mas caracteres (asumiendo que solo puede haber un . en el email)
+y que despues del . haya al menos 2 caracteres
+*/
+
+alter table votantes add constraint ck_email check(email like '%_@_%._%');
+
+alter table votantes drop constraint ck_email;
+
+
