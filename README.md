@@ -450,3 +450,15 @@ Escoger 184. ¿Cual es el principal objetivo del SGBD?
 Escoger 185. Segun su modelo de datos
 
 Escoger 186. Indique la respuesta correcta respecto al incumplimiento de las formas normales en un esquema de base de datos:
+
+Escoger 187. El objetivo de la arquitectura en tres niveles Ansi/Sparc es:
+
+Escoger 188. Segun la arquitectura en tres niveles ANSI/SPARC el nivel externo de una base de datos:
+
+Escoger 189. ¿Que son las bases de datos distribuidas?
+
+Escoger 190. ¿Que problema tenian los ficheros para que fueran necesarias las bases de datos?
+
+Escoger 191. Definicion de base de datos:
+
+Escoger 192. La variable :new
