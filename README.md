@@ -1919,12 +1919,50 @@ Escoger 186. Indique la respuesta correcta respecto al incumplimiento de las for
 
 Escoger 187. El objetivo de la arquitectura en tres niveles Ansi/Sparc es:
 
+    Crear grandes repositorios de datos
+
+    Facilitar los tiempos de respuesta y de acceso a la base de datos
+
+    Independencia de los datos: propiedad de modificar un nivel sin que se vean afectados los niveles superiores (solucion)
+
 Escoger 188. Segun la arquitectura en tres niveles ANSI/SPARC el nivel externo de una base de datos:
+
+    Se define utilizando el lenguaje de definicion de datos proporcionado por el Sistema Gestor de Base de Datos (solucion)
+
+    Esta formado por el interfaz grafico de la aplicacion que se comunica con el Sistema Gestor de Base de Datos
+
+    Describe la conexion entre los metadatos y los ficheros del sistema operativo
 
 Escoger 189. ¿Que son las bases de datos distribuidas?
 
+    Bases de datos formadas por computadores no relacionados entre si
+
+    Bases de datos formadas por computadores relacionados entre si, ubicados en espacios diferentes (solucion)
+
+    Bases de datos formadas por computadores relacionados entre si
+
 Escoger 190. ¿Que problema tenian los ficheros para que fueran necesarias las bases de datos?
+
+    Ocupaban demasiado espacio para la capacidad de la epoca
+
+    Dificultad para que varias aplicaciones compartieran los datos (solucion)
+
+    No se podian utilizar en cintas magneticas
 
 Escoger 191. Definicion de base de datos:
 
+    Ambas son correctas (solucion)
+
+    Coleccion de datos que estan logicamente relacionados entre si, que tienen una definicion y una descripcion comunes y que estan estructurados de una forma peculiar
+
+    Coleccion de programas que aseguran el acceso a los datos
+
 Escoger 192. La variable :new
+
+    Tiene todos sus valores a NULL si la instruccion es UPDATE o DELETE
+
+    Contiene todas las filas insertadas en un trigger "instead of"
+
+    Se puede usar en la clausula WHERE de una sentencia SQL, pero no en PL/SQL
+
+    Se puede utilizar en el cuerpo de un trigger "for each row" (solucion)
