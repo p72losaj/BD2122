@@ -11,15 +11,63 @@ Flechas 1. Una adecuadamente cada ventaja de las BDs con su explicacion:
 
     Independencia de la representacion de la informacion respecto a las aplicaciones que la utilizan -> Independencia de los datos
 
+    Evita el almacenamiento multiple de una misma informacion para uso de distintas aplicaciones, o en distintos departamentos con propositos diferentes -> Reduccion de la redundancia
+
+    Permite garantizar la seguridad de la informacion, controlando el acceso y la manipulacion de la informacion por las distintas aplicaciones y usuarios -> Garantizar la seguridad
+
+    Impide que exista informacion discrepante sobre un mismo y unico hecho -> Evitar inconsistencias
+
+    Permite utilizar los mismos datos entre distintos usuarios y aplicaciones, gestionando el acceso concurrente de todas ellas a la informacion -> Compartir datos
+
 Flechas 2. Relaciona cada modulo del SGBD con la tarea realizada:
+
+    Garantiza que solamente usuarios autorizados puedan manipular la BD -> Modulo de seguridad
+
+    Asegura que la BD este en un estado consistente a pesar de que se produzcan fallos en el sistema -> Modulo de recuperacion del sistema
+
+    Garantiza la consistencia de la BD durante la ejecucion concurrente de transacciones -> Modulo de control de concurrencia
+
+    Evaluar y optimizar sentencias SQL -> Procesador y optimizador de consultas
 
 Flechas 3. Relaciona cada elemento del modelo E-R con su definicion:
 
+    Cada ocurrencia de una entidad se identifica por su relacion con una ocurrencia de otra entidad con la que tiene una dependencia de existencia -> Entidad debil
+
+    Cuando una relacion asocia ocurrencias de 3 entidades (iguales o distintas) -> Relacion ternaria
+
+    Cada ocurrencia de una entidad solo puede participar a una relacion de las señaladas -> Relaciones exclusivas
+
 Flechas 4. Relaciona cada elemento con su representacion en el diagrama E-R:
+
+    Conexiones entre los objetos de la BD -> Relaciones: Rombos etiquetados
+
+    Aquel objeto (real o abstracto) acerca del cual queremos almacenar informacion en la BD -> Entidad: Rectangulo nominal
+
+    Representan las propiedades de los objetos en la BD y las propiedades de sus asociaciones entre ellos -> Atributos: Elipses con nombre en su interior
 
 Flechas 5. Relaciona cada operacion de Algebra Relacional:
 
+    Restriccion, proyeccion, reunion y division -> Operadores relacionales propiamente
+
+    Union, interseccion, diferencia, producto cartesiano -> Operadores de conjuntos
+
+    Restriccion, proyeccion, reunion, producto cartesiano y division -> No es un grupo correcto
+
+    Restriccion, union, division y proyeccion -> No es un grupo correcto
+
 Flechas 6. Relaciona cada operacion con el tipo:
+
+    Proyeccion -> Unaria
+
+    Reunion -> Binaria
+
+    Restriccion -> Unaria
+
+    Division -> Binaria
+
+    Diferencia -> Binaria
+
+    Interseccion -> Binaria
 
 Flechas 7. Relaciona cada nombre de etapa de diseño con lo que implica:
 
@@ -28,6 +76,12 @@ Flechas 8. Une cada sentencia con lo que realiza
 2. Cuestiones de eleccion multiple
 
 Chequear 1. La persistencia de datos se soporta con
+
+    almacenamiento primario
+
+    almacenamiento secundario (Solucion)
+
+    almacenamiento fuera de linea (Solucion)
 
 Chequear 2. Los problemas detectados en los sistemas de ficheros antes de la llegada de las tecnicas de bases de datos se pueden resumir en
 
