@@ -9,6 +9,8 @@ ENLACE CUESTIONARIO:
 
 Flechas 1. Una adecuadamente cada ventaja de las BDs con su explicacion:
 
+    Independencia de la representacion de la informacion respecto a las aplicaciones que la utilizan -> Independencia de los datos
+
 Flechas 2. Relaciona cada modulo del SGBD con la tarea realizada:
 
 Flechas 3. Relaciona cada elemento del modelo E-R con su definicion:
