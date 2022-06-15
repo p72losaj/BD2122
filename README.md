@@ -309,9 +309,27 @@ Chequear 23. Una tabla que no este en FN4
 
 Chequear 24. El entidad-relacion
 
+    es un lenguaje grafico (solucion)
+
+    es un modelo de datos de proposito particular
+
+    es un modelo de datos semantico (solucion)
+
 Chequear 25. La FNBC en una relacion R1
 
+    se cumple siempre si solo hay una clave candidata (solucion)
+
+    se cumple cuando R esta en FN3 y tiene varias claves candidatas no solapadas (solucion)
+
+    no hace falta tratarla si R esta ya en FN3 aunque no necesariamente en FN2
+
 Chequear 26. Cuando hablamos de restricciones en un esquema relacional, estamos hablando de
+
+    que, entre otros, la concatenacion natural debe hacerse con columnas que se llamen igual y tengan el mismo dominio
+
+    como se relacionan las tablas entre si (solucion)
+
+    que datos se pueden almacenar en el y cuales no (solucion)
 
 3. Cuestiones de eleccion unica
 
@@ -1455,111 +1473,449 @@ Escoger 132. En algebra relacional, el producto cartesiano entre 2 relaciones ne
 
 Escoger 133. Dentro de la arquitectura estandar de un sistema de gestion de bases de datos, los esquemas externos
 
+    permiten las vistas parciales necesarias para las aplicaciones (solucion)
+
+    comunican el esquema conceptual con el fisico (interno)
+
+    representan los detalles de almacenamiento en un disco duro (ficheros, organizacion, indices, etc)
+
 Escoger 134. Los discos flexibles (diskette, floppy) son almacenamiento
+
+    primario
+
+    secundario (solucion)
+
+    no son nada, no sirven para almacenar datos sino que aumentaban la RAM en ordenadores del siglo pasado
 
 Escoger 135. Un modelo de datos es
 
+    una base de datos que sirve de modelo o plantilla para diseñar otras nuevas
+
+    el convenio utilizado para diseñar, por ejemplo, bases de datos (solucion)
+
+    una fase mas del desarrollo del software como el analisis, el diseño y la implementacion
+
 Escoger 136. De cuarta forma normal y quinta forma normal
+
+    si esta en FN4 no necesariamente esta en FN3
+
+    su proceso de normalizacion descompone en nuevas tablas (solucion)
+
+    su proceso de normalizacion proyecta nuevas tablas
 
 Escoger 137. Si una relacion se define en funcion de sus atributos como R(a,b,c) y (a,b,c) es clave primaria,
 
+    ya no se pueden definir mas claves candidatas (solucion)
+
+    podria tener 4 claves candidatas: la primaria antes mencionada y las alternativas (a,c), (b,c) y (c)
+
+    tendra como maximo 3 claves candidatas
+
 Escoger 138. Con la llegada del modelo relacional
+
+    el concepto de registro se matiza o se sustituye por el de tupla (solucion)
+
+    el concepto de registro se matiza o se sustituye por el de fila
+
+    tupla, registro y fila son exactamente lo mismo, en el contexto que sea
 
 Escoger 139. La relacion matematica, antes de su adaptacion al modelo relacional
 
+    tiene ordenadas las tuplas de una relacion
+
+    tiene ordenadas los componentes de todas las tuplas de una relacion (solucion)
+
+    no tiene orden alguno, ni de tuplas ni de componentes de tuplas
+
 Escoger 140. La no duplicidad de tuplas en el modelo relacional se consigue mediante
+
+    claves candidatas (solucion)
+
+    claves ajenas
+
+    indices de enteros cortos
 
 Escoger 141. La organizacion aleatoria calculada (hash)
 
+    puede necesitar registros o areas de desbordamiento (solucion)
+
+    me optimiza, en tiempo, los listados ordenados por un campo cualquiera
+
+    los registros estan, siempre, ordenados fisicamente por un campo clave
+
 Escoger 142. La definicion de tablas en un SGBD relacional constituye
+
+    la cardinalidad de la BD
+
+    el esquema de la BD (solucion)
+
+    el estado de la BD
 
 Escoger 143. Si una relacion se define en funcion de sus atributos como R(a,b,c) y (a,b) es clave primaria,
 
+    podra tener como maximo 3 claves candidatas (solucion)
+
+    ya no se pueden definir mas claves candidatas
+
+    podria tener 4 claves candidatas: la primera antes mencionada y las alternativas (a,c), (b,c) y (c)
+
 Escoger 144. Si todo valor de clave ajena ha de aparecer en la tabla que hace referencia, nos estamos refiriendo a
+
+    integridad referencial (solucion)
+
+    integridad de clave
+
+    restricciones de cardinalidad minima uno
 
 Escoger 145. LIBROS(titulo, autor, tipo, precio, editor); Titulo, autor, tipo -> precio, editor; Precio, editor -> tipo. Las claves candidatas son
 
+    (Titulo, autor, tipo) y (titulo, autor, precio, editor) (solucion)
+
+    (Titulo, autor, tipo) y (precio, editor)
+
+    (Precio, editor) y (tipo)
+
 Escoger 146. Las propiedades de cobertura de una generalizacion son
+
+    claves ajenas que son, al mismo tiempo, claves primarias o alternativas
+
+    total o parcial, y solapada o disjunta (solucion)
+
+    propagar, anular o rechazar
 
 Escoger 147. Si R es una relacion compuesta por 3 atributos R(A,B,C), que las claves candidatas sean irreducibles significa que
 
+    (A,C) y (A,B) pueden ser ambas claves candidatas (solucion)
+
+    (A,B) no pueden ser clave candidata si (A) es clave ajena
+
+    (A,B,C) no puede ser clave candidata
+
 Escoger 148. Supon las relaciones R(A,C) y S(B,C,D). Calcula la concatenacion natural de R y S. ¿Cual de las siguientes tuplas saldra como resultado? Asume que cada tupla tiene un esquema (A,C, B, D)
+
+    (7, 1, 5, 6) (solucion)
+
+    (6, 3, 4, 9)
+
+    (7, 5, 1, 8)
 
 Escoger 149. Ventajas de la arquitectura cliente-servidor
 
+    el servidor solo satisface peticiones de datos, y el cliente procesa estos datos (solucion)
+
+    los datos estan en el cliente y es el servidor el que da formato a esos datos para presentarlos en pantalla
+
+    centralizar grandes BD en una sola maquina serivodor, eliminando toda redundancia posible
+
 Escoger 150. Una tabla en el modelo relacional
+
+    no puede tener filas duplicadas (solucion)
+
+    cada columna debe tener un identificador
+
+    define claramente el orden de sus filas
 
 Escoger 151. LIBROS(titulo, autor, tipo, precio, editor); Titulo, autor, tipo -> precio, editor; Precio, editor -> tipo. La relacion esta en
 
+    FN2 pero no en FN3
+
+    FNBC    
+
+    FN3 pero no en FNBC (solucion)
+
 Escoger 152. La FN2 persigue que
+
+    no haya dependencias funcionales transitivas
+
+    no haya claves alternativas
+
+    no haya dependencias funcionales incompletas (solucion)
 
 Escoger 153. La definicion de la relacion matematica por intencion, despues de su adaptacion al modelo relacional es equivalente a su
 
+    cardinalidad
+
+    esquema (solucion)
+
+    contenido
+
 Escoger 154. Una restriccion de correspondencia entre clases de objetos de cardinalidad minima 3
+
+    no es real, nunca se puede dar en ningun sistema de informacion
+
+    nos dice que la ocurrencia del objeto esta presente en la agregacion al menos 3 veces (solucion)
+
+    indica la existencia de 3 claves ajenas
 
 Escoger 155. Los esquemas externos se pueden ver como
 
+    el nivel de la arquitectura de un SGBD que permite evitar el gran abismo entre esquema conceptual y esquema interno
+
+    subconjuntos del esquema interno que describe toda la BD
+
+    descripciones de subconjuntos de datos y relaciones entre ellos, de interes para una o varias aplicaciones dadas (solucion)
+
 Escoger 156. Los registros de longitud fija
+
+    facilitan la recuperacion de registros concretos (solucion)
+
+    nunca deberia utilizarse con la tecnologia actual
+
+    tambien necesitan marcas para identificar el final del registro
 
 Escoger 157. El operador concatenacion natural del algebra relacional, para poderse ejecutar apropiadamente
 
+    necesita atributos con el mismo dominio pero no necesariamente con el mismo nombre
+
+    necesita atributos con el mismo dominio y con el mismo nombre (solucion)
+
+    precisa de claves ajenas
+
 Escoger 158. La organizacion aleatoria calculada (hash)
+
+    me optimiza, en tiempo, los listados ordenados por un campo cualquiera, no necesariamente la clave
+
+    los registros estan, siempre, ordenados fisicamente por un campo clave (solucion)
+
+    necesitan ficheros auxiliares para acceder mediante el valor clave, y despues, direccionar al fichero principal de datos
 
 Escoger 159. R(A, B, C) y S(C,D). El semi-join de R y S, ¿que esquema obtendria?
 
+    (A,B) (solucion)
+
+    (A,B,C)
+
+    (A,B,C,D,E)
+
 Escoger 160. Por persistencia entendemos
+
+    que el disco duro no se apaga nunca, en todo caso se deja en suspension
+
+    almacenar informacion para su posterior recuperacion y proceso (solucion)
+
+    el almacenamiento conceptual
 
 Escoger 161. Un modelo de datos es
 
+    la herramienta intelectual que nos permite estructurar los datos de forma que se capte la semantica de los mismos (solucion)
+
+    una fase mas del desarrollo del software como el analisis, el diseño y la implementacion
+
+    un esquema conceptual
+
 Escoger 162. En toda relacion se puede encontrar al menos una clave candidata ya que el conjunto de todos los atributos de una relacion siempre
+
+    cumple la propiedad de identificacion unica e irreducibilidad
+
+    es una clave candidata
+
+    cumple la propiedad de identificacion unica (solucion)
 
 Escoger 163. Dentro de la arquitectura estandar de un sistema de gestion de bases de datos, los esquemas externos
 
+    enlazan el sistema operativo con el esquema logico
+
+    son los encargados de manejar el raton y el teclado del ordenador, entre los dispositivos de entrada y salida
+
+    son el puente entre el esquema logico y las aplicaciones (solucion)
+
 Escoger 164. Las bases de datos NoSQL
+
+    son adecuadas para todo tipo de aplicacion sin excepcion
+
+    generalmente no necesitan ni usan esquema de bases de datos, se dicen schema-less (solucion)
+
+    utilizan variantes de SQL que no permiten ordenes SELECT de mas de una tabla
 
 Escoger 165. Si todo valor de clave ajena ha de aparecer en la tabla a la que hace referencia, nos referimos a que
 
+    restricciones de cardinalidad minima 1
+
+    integridad referencial (solucion)
+
+    integridad de clave
+
 Escoger 166. Las dependencias funcionales se dan cuando cada valor de un atributo determina
+
+    un unico valor de otro (solucion)
+
+    un conjunto de valores de otro
+
+    depende de una clave ajena
 
 Escoger 167. La FNBC en una relacion R
 
+    se cumple siempre si solo hay una clave candidata (solucion)
+
+    se cumple cuando R esta en FN3 y tiene varias claves candidatas no solapadas
+
+    no hace falta tratarla en si R ya esta en FN3 aunque no necesariamente en FN2
+
 Escoger 168. En E-R, la agregacion
+
+    consiste en encontrar subtipos dentro de una clase de objetos general
+
+    permite relacionar entidades con relaciones (solucion)
+
+    no admite atributos multivaluados
 
 Escoger 169. Uno de los indicadores de la importancia del algebra dentro del modelo relacional es
 
+    su uso en ciertos optimizadores de consultas (solucion)
+
+    su potencia de calculo
+
+    que SQL, por ejemplo, no ofrece operadores como la union, interseccion o diferencia
+
 Escoger 170. Las bases de datos NoSQL son adecuadas
+
+    para sistemas de informacion sin esquema o con un esquema excesivamente complejo (solucion)
+
+    para cualquier sistema de informacion, sea critico o no en la ejecucion y gestion de transacciones
+
+    en sistemas de informacion que manejen transacciones con dinero
 
 Escoger 171. Cuando utilizamos tecnologia NoSQL para el almacenamiento y recuperacion de datos
 
+    podemos estar tan seguros como en una BD relacional de que nuestros datos son consistentes, sin errores de correspondencia
+
+    es porque nos preocupa que las claves ajenas cumplan con la integridad referencial
+
+    asumimos que puede haber datos inconsistentes o falta de ellos, lo que no importa mucho dado el volumen de datos y su objetivo (solucion)
+
 Escoger 172. La tecnologia NoSQL nace, entre otras razones
+
+    por facilitar y abaratar el escalado horizontal los sistemas de BD (solucion)
+
+    porque es mas facil programar con este tipo de BD
+
+    debido a que las BD relacionales no permiten tener los datos distribuidos geograficamente
 
 Escoger 173. Las bases de datos NoSQL son mas rapidas que las relacionales:
 
+    siempre, nacieron para eso, para batir a esos sistemas
+
+    depende de en que aplicaciones y del volumen de datos (solucion)
+
+    nunca, las realmente rapidas son las de Google o de Amazon, y ellos no permiten que otros las usen
+
 Escoger 174. Si justo despues de crear una tabla ejecutamos un ROLLBACK
+
+    La instruccion quedara suspendida (bloqueada y sin terminar), esperando a que otra sesion diferente cancele o confirme la creacion de la tabla
+
+    La tabla permanecera intacta, ya que la creacion de la tabla es una sentencia autoconfirmada (solucion)
+
+    Oracle producira un error, ya que no sabra que hacer
+
+    La tabla sera eliminada, ya que la instruccion ROLLBACK cancelara la transaccion en curso
 
 Escoger 175. ¿Cual es el proposito de la OLTP?
 
+    Facilita y administra aplicaciones y transacciones (solucion)
+
+    Facilitamiento de los tiempos de carga debido al almacenamiento de los datos en la memoria principal
+
+    Favorece la divulgacion y analisis de los datos
+
 Escoger 176. En las bases de datos relacionales, una relacion consta de
+
+    Un atributo y un valor
+
+    Un esquema y un cuerpo (solucion)
+
+    Un dominio y un valor
+
+    Un atributo y un dominio
 
 Escoger 177. Si un usuario crea una vista sobre una o varias de sus propias tablas y las esta manipulando bajo una unica sesion, indique la respuesta correcta
 
+    Si modifica (y confirma) las filas de las tablas sobre las que se define la vista tendra que volver a generar la vista, pues de lo contrario el acceso a la vista generara un error
+
+    Si modifica las filas de las tablas sobre las que define la vista, la vista no mostrara el contenido "actualizado" mientras no confirme las modificaciones sobre las tablas origen
+
+    Las filas de las tablas usadas para la construccion de una vista no pueden ser modificadas, para poder hacerlo debemos borrar la vista
+
+    La consulta de la vista se lanza cada vez que accedemos a ella, por la que siempre mostrara la version mas actual visible (y confirmada) de las tablas sobre las que define (solucion)
+
 Escoger 178. Indique la respuesta correcta respecto a la desconexion de una sesion en el gestor de base de datos de Oracle
+
+    Todas son correctas (solucion)
+
+    Si tengo varias sesiones abiertas con el mismo usuario y desconecto una de ellas las demas seguiran activas
+
+    Si desconecto la sesion mediante la interrupcion abrupta de la conexion de red (quito el cable, desconecto la wifi o mato el proceso) todos los cambios sin confirmar seran automaticamente anulados
+
+    Si desconecto la sesion mediante el boton de desconexion o el comando de salida todos los cambios sin confirmar seran automaticamente confirmados
 
 Escoger 179. ¿Que es una base de datos centralizada?
 
+    Una base de datos con la informacion localizada en varios puntos
+
+    Una base de datos con la informacion que esta localizada en un punto, con acceso desde cualquier lugar
+
+    Una base de datos de proposito general (solucion)
+
 Escoger 180. En la arquitectura a 3 niveles, ¿cual es la mas cercana a los usuarios?
+
+    Nivel externo (solucion)
+
+    Nivel conceptual
+
+    Nivel interno
 
 Escoger 181. Indique la respuesta correcta respecto a la independencia de datos en la arquitectura de 3 niveles:
 
+    Es la propiedad que permite realizar modificaciones en un nivel sin afectar a ningun otro nivel, ya sean superiores o inferiores
+
+    Es la propiedad que permite realizar modificaciones en un nivel sin afectar al nivel inmediato inferior
+
+    Es la propiedad que permite la internacionalizacion de las cadenas de caracteres
+
+    Es la propiedad que permite realizar modificaciones en un nivel sin afectar al nivel inmediato superior (solucion)
+
 Escoger 182. Una relacion 1-N entre 2 entidades A y B, da lugar en el modelo relacional a
+
+    Se obtienen 3 tablas: Tabla A, tabla B mas la tabla R (la resultante de la relacion)
+
+    Tabla A con sus atributos. Tabla B con sus atributos mas los de la clave primaria de la entidad A (solucion)
+
+    Tabla A con sus atributos mas los de la clave primaria de la entidad B. Tabla B con sus atributos mas los de la clave primaria de la entidad A
+
+    Tabla B con sus atributos. Tabla A con sus atributos mas los de la clave primaria de la entidad B
 
 Escoger 183. Los metadatos son:
 
+    Un catalogo completo con toda la descripcion sobre el programa y el uso de este
+
+    Un catalogo completo con toda la descripcion del usuario y del equipo usado
+
+    Un catalogo completo con toda la descripcion de la estructura y restricciones de los datos (solucion)
+
 Escoger 184. ¿Cual es el principal objetivo del SGBD?
+
+    Contener informacion de los usuarios, manipularla, diseñar BD y utilizar sus lenguajes
+
+    Compartir datos a los usuarios
+
+    Proporcionar una forma de describir, recuperar y manipular los datos integrados en la BD, asegurando confidelidad y seguridad (solucion)
 
 Escoger 185. Segun su modelo de datos
 
+    Las BD jerarquicas se basan en la Logistica Clasica
+
+    Las BD relacionales se basan en la Teoria de Conjuntos (solucion)
+
+    Las BD relacionales se basan en la Logica Clasica
+
 Escoger 186. Indique la respuesta correcta respecto al incumplimiento de las formas normales en un esquema de base de datos:
+
+    El gestor de base de datos no asegura el cumplimiento de las formas normales, el incumplimiento de las formas normales unicamente afecta a la elegancia del diseño y no tiene repercusiones sobre la informacion
+
+    El gestor de base de datos no asegura el cumplimiento de las formas normales, pudiendo existir problemas en la coherencia e integridad de la informacion que el gestor no puede controlar (solucion)
+
+    Si incumplo alguna forma normal el gestor de base de datos emite un error
+
+    El gestor de base de datos no asegura el cumplimiento de las formas normales, pero la informacion extraida de un esquema que incumpla alguna de ellas sera erronea
 
 Escoger 187. El objetivo de la arquitectura en tres niveles Ansi/Sparc es:
 
