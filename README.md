@@ -71,7 +71,27 @@ Flechas 6. Relaciona cada operacion con el tipo:
 
 Flechas 7. Relaciona cada nombre de etapa de diseño con lo que implica:
 
+    Esta actividad tiene como objetivo, teniendo en cuenta la representacion de los datos, elegir las estructuras de almacenamiento e indices para mejorar el rendimiento -> diseño fisico
+
+    esta actividad tiene como objetivo la traduccion del esquema conceptual en el modelo empleado por el SGBD dando lugar por una parte a un esquema logico y por otra a un conjunto de transacciones que expresan la estatica y la dinamica -> diseño logico
+
+    esta actividad tiene como objetivo obtener una representacion de la realidad que capture las propiedades estaticas y dinamicas de la misma, necesarias para satisfacer los requisitos recogidos en la actividad previa -> diseño conceptual
+
+    esta actividad tiene como objetivo descubir el conjunto de requisitos de informacion y de proceso, que la organizacion necesita -> analisis
+
+    esta tarea consiste en la incorporacion del SI diseñado a la organizacion con la puesta en marcha de la BD y de las aplicaciones desarrolladas: test de funcionamiento y mantenimiento -> implantacion
+
 Flechas 8. Une cada sentencia con lo que realiza
+
+    UPDATE miTabla SET nombre='Juan Lopez'; -> Actualiza datos de la tabla miTabla
+
+    DROP TABLE miTabla; -> Borra la estructura tabla miTabla
+
+    CREATE TABLE miTabla (codigo NUMBER, nombre VARCHAR2(20), PRIMARY KEY (codigo)) -> Crea la tabla miTabla
+
+    DELETE FROM miTabla; -> Borra los datos de la tabla miTabla
+
+    INSERT INTO miTabla VALUES (5, 'Elena Lopez'); -> Inserta una fila en la tabla miTabla
 
 2. Cuestiones de eleccion multiple
 
@@ -85,47 +105,207 @@ Chequear 1. La persistencia de datos se soporta con
 
 Chequear 2. Los problemas detectados en los sistemas de ficheros antes de la llegada de las tecnicas de bases de datos se pueden resumir en
 
+    redundancia de datos (solucion)
+
+    seguridad insuficiente (solucion)
+
+    los programas dependen de los datos
+
+    los programas dependen de los datos que no se usan (solucion)
+
 Chequear 3. Segun este esquema E-R
+
+    los usuarios solo pueden pedir N articulos, donde N es un valor indeterminado entre 0 y 1
+
+    los usuarios pueden pedir todos los articulos existentes, si quieren (solucion)
+
+    los usuarios siempre tienen email, dni, nombre y apellidos (solucion)
+
+    todos los usuarios deben haber pedido algo
 
 Chequear 4. Segun este esquema E-R
 
+    los usuarios pueden tener varias localidades de residencia, la principal y la de veraneo, por ejemplo
+
+    los usuarios se identifican por su dn
+
+    los usuarios siempre viven en al menos una localidad (solucion)
+
+    las localidades pueden no tener habitantes (solucion)
+
 Chequear 5. Hablando del almacenamiento persistente de datos en computacion, por seguridad endentemos
+
+    recuperacion ante desastres (solucion)
+
+    dependencia de los programas de datos que no usan
+
+    acceso simultaneo a los datos (solucion)
+
+    autorizaciones (solucion)
 
 Chequear 6. De cuarta forma normal y quinta forma normal
 
+    solo en contadas ocasiones una tabla FN4 no se corresponde con una FN5 (solucion)
+
+    su proceso de normalizacion no genera nuevas claves ajenas (solucion)
+
+    en realidad, es mucho mas habitual encontrar tablas que no las cumplan que tablas que no cumplan la FN3
+
 Chequear 7. El proposito de los modelos de datos es
+
+    proporcionar las herramientas necesarias para modelar un sistema de informacion (solucion)
+
+    permitir obtener un esquema como representacion de un sistema eliminando detalles irrelevantes (solucion)
+
+    definir un lenguaje de programacion como C, PHP y Java
+
+    introducir la definicion de los ficheros dentro del codigo del programa
 
 Chequear 8. El direccionamiento dentro de un disco duro incluye
 
+    cabezal (solucion)
+
+    byte
+
+    cilindro (solucion)
+
+    sector (solucion)
+
 Chequear 9. En cuanto a los esquemas resultado de las distintas fases de desarrollo de software
+
+    el esquema conceptual no depende de una maquina y software concreta (solucion)
+
+    el esquema fisico es lo mas cercano al disco duro, al mantenimiento de ficheros (solucion)
+
+    el esquema conceptual se genera teniendo en cuenta que se va a trabajar en una BD
+
+    ninguno depende de otro, el logico no depende del conceptual, el fisico no depende del conceptual, ...
 
 Chequear 10. En E-R, la generalizacion
 
+    se define siempre con propiedades de cobertura (solucion)
+
+    si es parcial no es disjunta, y si es total no es solapada
+
+    es una representacion de subtipos de una clase de objetos general (solucion)
+
+    puede ser al mismo tiempo parcial,total, disjunta y solapada
+
 Chequear 11. Antes de la llegada de la tecnologica basada en BD, la definicion del fichero estaba incluida en el codigo de los programas por lo que un cambio de un dato en todos los programas que usan ese fichero obligan a
+
+    reversionar
+
+    reenlazar (solucion)
+
+    recodificar (solucion)
+
+    recompilar (solucion)
 
 Chequear 12. El lenguaje de definicion de datos
 
+    es parte de la definicion del modelo de datos (solucion)
+
+    me permite construir un esquema de, por ejemplo, una BD relacional (solucion)
+
+    tiene como algunos de sus cometidos principales permitirla insercion y modificacion de registros
+
+    puede ser navegacional o de especificacion
+
 Chequear 13. SELECT T1.a, T2.b FROM T1, T2 WHERE t1.b=T2.b, en algebra relacional, incluye
+
+    la proyeccion (solucion)
+
+    el producto cartesiano (solucion)
+
+    la seleccion (solucion)
+
+    la division
 
 Chequear 14. La persistencia se relaciona con
 
+    el almacenamiento cuaternario
+
+    el almacenamiento secundario (solucion)
+
+    el almacenamiento primario
+
+    el almacenamiento terciario (solucion)
+
 Chequear 15. El esquema es
+    
+    un lenguaje de programacion como C, PHP y Java
+
+    una descripcion de un sistema concreto (solucion)
+
+    el resultado de aplicar un determinado modelo de datos (solucion)
+
+    una descripcion de ficheros
 
 Chequear 16. En las operaciones con datos en almacenamiento secundario
 
+    aunque se trabaje con un registro, el disco se procesa por bloques o paginas (solucion)
+
+    MAC OS y Sun solo utilizan almacenamiento primario
+
+    antes hay que transferir la informacion desde el almacenamiento secundario al primario (solucion)
+
+    si quiero recuperar un unico byte, el sistema operativo no me proporciona herramienta alguna, tengo que especificar dentro del programa el cabezal, cilindro y sector del disco
+
 Chequear 17. Una generalizacion parcial y solapada
+
+    se puede representar en el modelo relacional (solucion)
+
+    se puede representar en entidad-relacion (solucion)
+
+    no existe, las generalizaciones solo pueden ser totales y disjuntas
 
 Chequear 18. En E-R, la generalizacion
 
+    representa una relacion de herencia, X es-un Y (solucion)
+
+    diferencia subconjuntos logicos o subclases dentro de un tipo o clase concreta (solucion)
+
+    no existe como tal, es una simulacion de lo que si se puede representar en el modelo relacional
+
 Chequear 19. SELECT T1.* FROM T1,T2 WHERE T1.a=T2.a AND T1.b=T2.b, en algebra relacional, podria resolverse (solo, o combinando el operador con otros)
+
+    la interseccion (solucion)
+
+    la diferencia
+
+    la concatenacion natural (solucion)
 
 Chequear 20. En SQL, definicion de datos es
 
+    alter table x (solucion)
+
+    drop table x (solucion)
+
+    insert into x (select)
+
 Chequear 21. La concatenacion natural del algebra relacional
+
+    siempre se puede expresar como una secuencia de producto cartesiano, seleccion y proyeccion (solucion)
+
+    solo se puede utilizar si entre 2 tablas operando existe una clave ajena de una a otra
+
+    no necesita que las relaciones sean compatibles (solucion)
 
 Chequear 22. Disco magnetico es
 
+    disco rigido (solucion)
+
+    disco versatil digital
+
+    disco flexible (solucion)
+
 Chequear 23. Una tabla que no este en FN4
+
+    tampoco esta en FNBC
+
+    nunca saldra de la transformacion de un esquema E-R a relacional (solucion)
+
+    facilita la posibilidad de introducir inconsistencias en la BD (solucion)
 
 Chequear 24. El entidad-relacion
 
@@ -835,107 +1015,443 @@ Escoger 80. La siguiente consulta SQL que obtiene el nombre y el telefono de los
 
 Escoger 81. Las siguientes consultas sobre la tabla
 
+    las dos consultas se comportan igual, devuelven 1 sola tupla en ambos casos
+
+    la consulta b devuelve 2 tuplas, mientras que la a devuelve 1 sola tupla
+
+    la consulta a devuelve una sola tupla, gracias a la clausula distinct que elimina duplicados
+    
+    devuelven lo mismo, puesto que en el resultado no hay repeticiones al contener la clave primaria el resultado (solucion)
+
 Escoger 82. Las funciones de agregados (promedio, suma, cuenta, maximo, minimo) cuando no se especifican grupos con la clausula GROUP BY, y se aplican a una tabla, se obtiene como resultado una tabla de cardinalidad 1, que contiene el valor de las funciones aplicadas sobre todas las tuplas de la tabla
+
+    Verdadero (solucion)
+
+    Falso
 
 Escoger 83. En SQL, se utiliza la clausula GROUP BY cuando se desea ordenar por la caracteristica de un grupo
 
+    verdadero
+
+    falso (solucion)
+
 Escoger 84. En SQL, la siguiente condicion cadena LIKE ('_OLA MUND_') devolveria TRUE para el valor de cadena = 'KOLA MUNDOS'
+
+    verdadero
+
+    falso (solucion)
 
 Escoger 85. En SQL, como en algebra relacional, existe el operador division
 
+    verdadero
+
+    falso (solucion)
+
 Escoger 86. En SQL existen los operadores de conjunto UNION, INTERSECCION, pero no existe el operador DIFERENCIA
+
+    verdadero
+
+    falso (solucion)
 
 Escoger 87. Dada la siguiente consulta: SELECT * FROM envios E1 WHERE E1.cantidad > (SELECT MIN(CANTIDAD) FROM envios E2 WHERE E2.s# = 'S2'); sobre la tabla envios
 
+    la consulta tiene errores y no se ejecutaria con exito
+
+    devuelve todos los envios cuya cantidad sea mayor que 15 (el 15 es el valor que se obtiene en la subconsulta)
+
+    devuelve todos los envios cuya cantidad sea mayor que 12 (el 12 es el valor que se obtiene en la subconsulta) (solucion)
+
+    la consulta no devuelve ninguna, puesto que las tuplas de envios no cumplen la condicion impuesta
+
 Escoger 88. La siguiente consulta sobre la tabla envios siguiente:
+
+    es equivalente a la consulta: SELECT * FROM envios WHERE cantidad=11 OR cantidad=15 OR cantidad=50; (solucion)
+
+    devuelve las tuplas que cumplan que el atributo cantidad es mayor que 11, 15 y 150
+
+    no devuelve ninguna tupla puesto que cantidad=11 no aparece en la tabla envios
+
+    devuelve las tuplas que cumplan que el atributo cantidad es menor que 11, 15 y 150
 
 Escoger 89. La siguiente consulta sobre la tabla envios:
 
+    tiene un error sintactico puesto que ALL solo se puede utilizar con subconsultas
+
+    devolveria lo mismo que la consulta: SELECT* FROM envios WHERE cantidad>=13;
+
+    es equivalente a la consulta: SELECT * FROM envios WHERE cantidad <= ANY(13,15,55);
+
+    devolveria lo mismo que la consulta: SELECT* FROM envios WHERE cantidad >= 55; (solucion)
+
 Escoger 90. Los operadores IN, ANY e IN son operadores de conjunto
+
+    verdadero (solucion)
+
+    falso
 
 Escoger 91. La siguiente cosulta sobre la tabla envios y obras
 
+    funcionaria correctamente y devolveria 2 tuplas ('carretera', 'pantano')
+
+    daria un error puesto que la subconsulta no devuelve ninguna tupla
+
+    daria un error puesto que el DISTINCT no se puede utilizar en la consulta principal
+
+    daria un error puesto que la subconsulta devuelve mas de una tupla (solucion)
+
 Escoger 92. Dada la consulta siguiente: SELECT * FROM ENVIOS E1 WHERE E1.CANTIDAD < (SELECT E2.CANTIDAD FROM ENVIOS E2 WHERE E2.S# = 'S3');
+
+    es correcta y seria equivalente a: SELECT * FROM envios E1 WHERE E1.cantidad < ANY(SELECT E2.cantidad FROM envios e2 WHERE E2.s# = 'S3');
+
+    es correcta y seria equivalente a: SELECT * FROM envios E1 WHERE E1.cantidad < ALL(SELECT E2.cantidad FROM envios E2 WHERE E2.s# = 'S3');
+
+    es correcta y devuelve todas las tuplas que tengan un valor del atributo cantidad < 16
+
+    daria un error puesto que la subconsulta puede devolver varios valores, y se necesita por tanto un operador de conjuntos (IN, ANY, ALL) (solucion)
 
 Escoger 93. La tecnologia magnetica aplicada al almacenamiento masivo de datos se aplica a
 
+    salvo a las tarjetas perforadas, a todos
+
+    discos duros y flexibles (solucion)
+
+    CD, DVD y Blu Ray
+
+    discos duros, discos flexibles y discos flash
+
 Escoger 94. La ordenacion secuencial ordenada
+
+    es la peor para obtener un listado ordenado por el campo clave
+
+    es la mejor para obtener un listado ordenado por cualquier campo
+
+    obliga a una reorganizacion fisica del fichero cada vez que quiero insertar un registro intermedio (solucion)
+
+    optimiza el espacio
 
 Escoger 95. Un indice denso
 
+    es un indice con muchos datos
+
+    requiere que el fichero de datos este ordenado por un campo clave (solucion)
+
+    estructuran los registros en forma de arbol
+
+    no pueden ser multinivel
+
 Escoger 96. Un modelo de datos es
+
+    todo aquello que se pueda consultar con la orden select
+
+    una base de datos ejemplo para todas las demas 
+
+    una teoria de especificacion describiendo como una base de datos se estructura y se usa (solucion)
+
+    un esquema de bases de datos como, por ejemplo, el de TiendaOnLine
 
 Escoger 97. SELECT T1.a, T1.b, T2.c FROM T1,T2 WHERE T1.b = T2.b, en algebra relacional, podria ser:
 
+    la concantenacion natural (solucion)
+
+    el producto cartesiano
+
+    la union
+
+    la division
+
 Escoger 98. Una consulta en algebra relacional que sea parecida a "dame todos los vendendores de la provincia de Alicante"
+
+    no se puede hacer porque precisa hacer la cuenta de filas que hay en la tabla, y en algebra relacional esta muy limitado para contar, ordenar, etc
+
+    no necesita el operador DIVISION (solucion)
+
+    necesita el operador DIVISION
 
 Escoger 99. Un defecto de normalizacion en una BD relacional puede provocar anomalias
 
+    al borrar la informacion de una tupla, ya que se pueden estar borrando tuplas de otras tablas involuntariamente
+
+    al insertar informacion en una tabla, porque los datos insertados no se corresponderan con la realidad
+
+    al modificar la informacion de una tabla, ya que un cambio simple de un dato podria afectar a varias tuplas (solucion)
+
 Escoger 100. Si en una tabla no hay dependencias funcionales entre sus atributos
+
+    habra tantas claves candidatas como columnas tenga la tabla
+
+    esa tabla solo tiene una clave candidata (solucion)
+
+    eso nunca ocurrira en modelo relacional: toda tabla tiene al menos una dependencia funcional
 
 Escoger 101. La normalizacion
 
+    se utiliza actualmente mas como un criterio de calidad en el diseño (solucion)
+
+    no es necesaria aunque si recomendable
+
+    es el mejor metodo para diseñar las BD
+
 Escoger 102. De la arquitectura cliente-servidor
+
+    es una nueva arquitectura del SGBD basada en otros esquemas
+
+    es un esquema mas de la arquitectura de un SGBD
+
+    es una organizacion distribuida donde el SGBD, si lo hay, haria el papel de servidor (solucion)
 
 Escoger 103. El trabajar con un SGBD que siga el Modelo Relacional fielmente nos garantiza
 
+    que en las tablas no hay tuplas duplicadas (solucion)
+
+    la posibilidad de utilizar columnas multivaluadas
+
+    que no hay redundancia de informacion
+
 Escoger 104. Si como producto de la adaptacion del concepto de relacion matematica al modelo relacional decimos que la relacion tiene intencion y la extension, la segunda se define como ...
+
+    el conjunto de n-tuplas, donde cada tupla es un conjunto de pares (nombreAtributo: valor) (solucion)
+
+    un conjuto de dominios no necesariamente disjuntos
+
+    un conjunto de nombres de atributos distintos, cada uno de ellos asociado a su dominio correspondiente
 
 Escoger 105. Una clave ajena en el modelo relacional
 
+    indica una asociacion entre objetos (solucion)
+
+    es un tipo de clave candidata
+
+    nunca podra estar formada por todos los atributos de una relacion
+
 Escoger 106. Al hablar de claves en el Modelo Relacional
+
+    una clave candidata de una relacion siempre debe ser tambien clave ajena
+
+    una clave ajena de una relacion R puede ser tambien la clave primaria de R (solucion)
+
+    una clave ajena de una relacion R debe coincidir con el numero de columnas con el de la clave primaria de R
 
 Escoger 107. En cuanto a las distintas notaciones del E-R
 
+    no es cierto, solo hay una unica notacion
+
+    unas sirven para el esquema conceptual, otras para el logico y otras para el fisico
+
+    nos referimos al nombre que le daremos al esquema de BD
+
+    nos da igual, podremos obtener un esquema equivalente en cada una de ellas (solucion)
+
 Escoger 108. Si una tabla tiene 4 columnas, la cantidad maxima posible de claves candidatas es
+
+    6 (solucion)
+
+    4
+
+    8
 
 Escoger 109. Una generalizacion total y disjunta
 
+    no existe, las generalizaciones solo pueden ser parciales y solapadas
+
+    no se puede representar en ningun modelo de datos
+
+    no se puede representar en el modelo relacional (solucion)
+
 Escoger 110. En realidad, el operador division del algebra relacional es una combinacion de
+
+    no es combinacion de nada, es una primitiva
+
+    seleccion, producto cartesiano y proyeccion
+
+    diferencias, producto cartesiano y proyecciones (solucion)
 
 Escoger 111. La ordenacion secuencia pura
 
+    es la mejor para añadir nuevos registros (solucion)
+
+    es la mejor para obtener un listado ordenado por cualquier campo
+
+    optimiza la busqueda de registros concretos
+
+    obliga a una reorganizacion del fichero cada vez que quiero insertar un registro intermedio
+
 Escoger 112. La primera BD, segun algunos autores, fue
+
+    Entidad-Relacion, de Chen
+
+    Oracle, de Codd y Date
+
+    IDS (General Electric) a partir de los trabajos de Charles Bachman (solucion)
 
 Escoger 113. La independencia logica en la arquitectura de 4 niveles de un SGBD se da entre
 
+    el esquema logico y los esquemas externos (solucion)
+
+    el esquema interno y los esquemas externos
+
+    el esquema conceptual y el esquema logico
+
+    el esquema logico y el esquema interno
+
 Escoger 114. El modelo relacional fue desarrollado teoricamente por
+
+    Chen
+
+    Elmasri
+
+    Codd (solucion)
 
 Escoger 115. La arquitectura cliente-servidor se basa en
 
+    la existencia de fragmentos de la BD geograficamente dispersos
+
+    la existencia de procesos que solicitan informacion y otros que la extraen de las BD (solucion)
+
+    la existencia de un grupo de usuarios que solicitan la informacion directamente al SGBD
+
 Escoger 116. Para evitar redundancias en una BD relacional
+
+    la politica adecuada para incrementar la integridad referencial es la de anular, aunque a veces es decision del diseñador emplear otra politica
+
+    se aplica el proceso de normalizacion hasta obtener relaciones en FN3 (en la mayoria de los casos) (solucion)
+
+    las claves ajenas deben tener prevista la politica adecuada ante operaciones de borrado
 
 Escoger 117. La integridad de clave, como restriccion del modelo relacional que afecta a las claves candidatas en un SGBD relacional
 
+    es la restriccion que garantiza la no duplicidad de tuplas (solucion)
+
+    se cumple en general para las restricciones de valor de los atributos
+
+    se cumple si toda clave es nulo o ningun atributo de la clave es nulo
+
 Escoger 118. La FNBC
+
+    se debe comprobar en tablas con una unica clave candidata
+
+    se debe comprobar en tablas con dos o mas claves candidatas (solucion)
+
+    es condicion necesaria para que una tabla este en FN3 cuando hay mas de una clave candidata
 
 Escoger 119. En el modelo relacional, una clave primaria puede ser al mismo tiempo
 
+    alternativa
+
+    multivaluada
+
+    clave ajena (solucion)
+
 Escoger 120. Al efectuar un producto cartesiano de algebra relacional de una tabla por si misma
+
+    provoca duplicados de tupla en la relacion resultado, que no se darian si el producto fuera entre 2 tablas diferentes
+
+    las columnas de la tabla derivada no tienen nombre
+
+    por definicion, nunca produce duplicados de tuplas (solucion)
 
 Escoger 121. Los sitemas de informacion
 
+    describen los datos conceptualmente
+
+    tienen como principal funcion manejar volumenes de datos tanto estructurados como no estructurados (solucion)
+
+    generan lenguajes de definicion y manipulacion de los datos
+
+    son modelos de datos
+
 Escoger 122. La definicion de relaciones (tablas) en una BD relacional establece las propiedades (del sistema de informacion que representan)
+
+    de registros
+
+    dinamicas
+
+    estaticas (solucion)
 
 Escoger 123. Las correspondencias entre clases Card(A, r) = (2,3)
 
+    no se pueden dar en ningun modelo de datos
+
+    obligan a que cada miembro de A se vincule con dos o tres miembros de otra clase de objetos (solucion)
+
+    indican una generalizacion solapada en dos de sus tres especializaciones
+
 Escoger 124. En cuanto a la cuarta y quinta forma normal
+
+    si modelas en entidad-relacion, ninguna tabla que se defina a partir de ese esquema cumplira la FN4 ni la FN5
+
+    se necesitan porque hay ciertas tablas optimas desde el punto de vista de las dependencias funcionales pero en las que aun se observa cierta redundancia (solucion)
+
+    algunos autores cifran en mas de un 60% la cantidad de tablas que incumplen alguna de estas formas normales en una muestra de 40 BD relacionales
 
 Escoger 125. Al decir que un SGBD vela por la integridad de los datos, nos referimos a que
 
+    los programas y esquemas no se vean afectados por cambios en datos que no usan
+
+    los usuarios no pueden acceder a ciertos datos ni operaciones a menos que esten debidamente autorizados
+
+    los datos estan debidamente interrelacionados y no hay interferencias en las lecturas y escrituras concurrentes (solucion)
+
 Escoger 126. La organizacion indexada se basa en la idea de que
+
+    no me preocupa el espacio ocupado en disco
+
+    no se necesita insertar con demasiada frecuencia
+
+    la seleccion de un campo cualquiera para la ordenacion de listados de datos es necesaria solo en muy contados casos
+
+    es mas facil manejar archivos pequeños que incluso podrian caber en RAM para encontrar un registro concreto (solucion)
 
 Escoger 127. Para un conjunto de atributos determinado, la integridad de clave consiste en
 
+    la imposibilidad de almacenar nulos (solucion)
+
+    que sus valores posibles son  los de una clave primaria
+
+    la imposibilidad de ser clave ajena
+
 Escoger 128. La independencia fisica en la arquitectura de 4 niveles de un SGBD se da entre
+
+    el esquema logico y el interno (solucion)   
+
+    el esquema conceptual y el logico
+
+    el esquema interno y los esquemas externos
+
+    el esquema logico y los esquemas externos
 
 Escoger 129. SELECT T1.* FROM T1,T2 WHERE T1.a=T2.a AND T1.b=T2.b, en algebra relacional, podria ser
 
+    la division
+
+    la interseccion (solucion)
+
+    el producto cartesiano
+
+    la union
+
 Escoger 130. Una especificacion de correspondencia entre clases Card(T,x) = (1,N)
+
+    indica una generalizacion parcial y solapada
+
+    se da cuando hay 2 claves ajenas, cada una en una tabla distinta, que "trabajan" para la misma relacion "X"
+
+    es imposible en un esquema de BD relacionales (solucion)
 
 Escoger 131. Una clave candidata puede contener nulos
 
+    nunca (solucion)
+
+    si no es, ademas, clave alternativa o primaria
+
+    si esta compuesta por mas de un atributo
+
 Escoger 132. En algebra relacional, el producto cartesiano entre 2 relaciones necesita
+
+    que haya algun atributo con el mismo nombre y dominio en las 2 tablas
+
+    no necesita nada, se puede hacer siempre que queramos (solucion)
+
+    que estas sean compatibles
 
 Escoger 133. Dentro de la arquitectura estandar de un sistema de gestion de bases de datos, los esquemas externos
 
