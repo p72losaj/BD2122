@@ -2664,3 +2664,193 @@ Escoger 262. La versatilidad de las bases de datos es una caracteristica que:
     Simplifica la representacion del problema (solucion)
 
     Aumenta el desempeño fisico
+
+Escoger 263. En el modelo Entidad-Interrelacion...
+
+    Una entidad puede ser una interrelacion
+
+    No existen entidades sin estar relacionadas
+
+    Una entidad es la instanciacion de un tipo de entidad (solucion)
+
+    Las entidades son conocidas por el diseñador
+
+Escoger 264. Cuando un modelo de datos conceptual acerca de un fenomeno se modifica:
+
+    La vision externa de la base de datos se modifica
+
+    La estructura logica de la base de datos se modifica (solucion)
+
+    Se debe empezar a hacerlo de nuevo
+
+    La base de datos no se modifica
+
+Escoger 265. En el modelo en red:
+
+    Los registros de un tipo de registro pueden tener multiples ordenaciones (solucion)
+
+    Los registros de un tipo de registro se ordenan siempre por una clave principal
+
+    Los registros de un tipo de registro no tiene orden
+
+    Los registros de un tipo de registro se ordenan en base al DBTG en que participa
+
+Escoger 266. En el modelo Entidad-Interrelacion un tipo de interrelacion (1,n)-(1,1)...
+
+    Implica debilidad (solucion)
+
+    Es una representacion de una herencia
+
+    El identificador del tipo de entidad que participa con (1,1) esta definido en el otro tipo de entidad
+
+    Deberia especificarse como (1,1)-(1,n)
+
+Escoger 267. Conocidas las proridades que participan en un problema del mundo real, los modelos de datos usan la abstraccion mediante mecanismos de...
+
+    Todas son ciertas
+
+    Generalizacion y refinamiento
+
+    Agregacion y refinamiento
+
+    Generalizacion y agregacion (solucion)
+
+Escoger 168. En el modelo relacional, si dos tablas tienen la misma clave principal y a la vez foranea...
+
+    Existe un error de diseño
+
+    Representa una relacion (1,1) entre el mismo tipo de objeto (solucion)
+
+    Representa una integridad de dominio fuerte de los atributos clave
+
+    Representa relaciones fuertes (1,1) o (1,n) entre tipos de entidades
+
+Escoger 169. En el modelo Entidad-Interrelacion...
+
+    El identificador principal de una entidad nunca puede ser NULL, pero el candidato puede no tomar valor
+
+    El dominio de un identificador alternativo es el mismo que si fuera candidato (solucion)
+
+    Un identificador alternativo puede estar definido en cualquier dominio
+
+    El dominio de un identificador alternativo y candidato debe ser diferente al identificador principal
+
+Escoger 170. En el modelo relacional, una dependencia funcional
+
+    Considera la dependencia entre dos atributos de una tabla (solucion)
+
+    Considera las dependencias entre los atributos de la base de datos
+
+    Considera las dependencias entre los atributos primos y no primos de una tabla
+
+    Considera los valores de los atributos de una tabla que esten relacionados
+
+Escoger 171. En el modelo jerarquico...
+
+    Los punteros siempre apuntan del tipo de registro padre al hijo
+
+    Los punteros se manejan de forma logica en un numero definido por el usuario
+
+    No existen punteros fisicos
+
+    Ninguna de las anteriores (solucion)
+
+Escoger 172. En el modelo jerarquico...
+
+    Ninguna es correcta (solucion)
+
+    Las relaciones (n:n) se implementan duplicando los punteros de los registros aunque suponga redundancia
+
+    Las relaciones (n:n) se pueden implementar modificando el modelo conceptual
+
+    Las relaciones (n:n) no se pueden implementar
+
+Escoger 173. En el modelo relacional...
+
+    En esquemas diferentes las tablas pueden tener igual nombre (solucion)
+
+    No existe limitacion para nominar las tablas
+
+    El nombre de las tablas debe ser el mismo que el tipo de entidad
+
+    Las tablas pueden ser estaticas y dinamicas segun se nominen
+
+Escoger 174. En el modelo Entidad-Interrelacion...
+
+    La debilidad por fortaleza de otras entidades da lugar a entidades debiles
+
+    Una entidad es debil porque hay otra entidad fuerte
+
+    Una entidad es debil porque hay semantica que no se puede representar
+
+    La entidad es debil por la naturaleza del problema (solucion)
+
+Escoger 175. En una tabla del modelo relacional...
+
+    Los atributos pueden estar definidos en dominios simples
+
+    Los atributos pueden estar definidos en cualquier dominio (solucion)
+
+    Los atributos deben estar definidos en dominios simples y distintos
+
+    Los atributos deben estar definidos en dominios diferentes
+
+Escoger 176. La herramienta informatica que permite crear, manipular, gestionar y eliminar los datos y las estructuras de una base de datos es:
+
+    Una base de datos jerarquica/red
+
+    Un SGBD (solucion)
+
+    Una base de datos relacional
+
+    Ninguna es correcta
+
+Escoger 177. En el modelo Entidad-Interrelacion...
+
+    Los tipos de entidades debiles son dobles rectangulos y los tipos de interrelaciones debiles son dobles rombos
+
+    Ninguna es correcta (solucion)
+
+    Los tipos de entidades fuertes son rectangulos dobles y los atributos identificadores estan rellenos
+
+    Los tipos de entidades debiles son dobles rectangulos
+
+Escoger 178. Una vision canonica de la base de datos...
+
+    Es dependiente del SGBD (solucion)
+
+    La vision fisica debe considerarse
+
+    Se deriva de la vision logica y de ella la vision externa
+
+    Debe ser derivada de la vision externa
+
+Escoger 179. Un modelo de datos relacional...
+
+    Puede estar basado en diferentes teorias
+
+    Debe describirse con SQL
+
+    Debe acompañarse de una representacion grafica de las tablas
+
+    Debe siempre derivarse de un modelo EE-R (solucion)
+
+Escoger 180. La granularidad...
+
+    Afecta a la vision externa (solucion)
+
+    Determina la forma de describir la vision logica
+
+    Es alta o baja en funcion del tamaño de los objetos de la base de datos
+
+    Debe describirse en la vision conceptual
+
+Escoger 181. En el modelo Entidad-Interrelacion...
+
+    Los atributos derivados solo pueden ser parte del identificador principal cuando existe una debilidad por identificacion (solucion)
+
+    Los atributos derivados y calculados pueden ser identificadores
+
+    Los atributos derivados y calculados solo son identificadores si existe una debilidad entre tipos de entidad
+
+    Los atributos derivados pueden ser identificadores, los calculados no, aunque haya debilidad
