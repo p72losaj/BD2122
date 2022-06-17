@@ -7,7 +7,7 @@ ENLACE CUESTIONARIO:
 
 1. Cuestiones de unir flechas
 
-Flechas 1. Una adecuadamente cada ventaja de las BDs con su explicacion:
+Flechas 1. Una adecuadamente cada ventaja de las bases de datos con su explicacion:
 
     Independencia de la representacion de la informacion respecto a las aplicaciones que la utilizan -> Independencia de los datos
 
@@ -21,11 +21,11 @@ Flechas 1. Una adecuadamente cada ventaja de las BDs con su explicacion:
 
 Flechas 2. Relaciona cada modulo del SGBD con la tarea realizada:
 
-    Garantiza que solamente usuarios autorizados puedan manipular la BD -> Modulo de seguridad
+    Garantiza que solamente usuarios autorizados puedan manipular la base de datos -> Modulo de seguridad
 
-    Asegura que la BD este en un estado consistente a pesar de que se produzcan fallos en el sistema -> Modulo de recuperacion del sistema
+    Asegura que la base de datos este en un estado consistente a pesar de que se produzcan fallos en el sistema -> Modulo de recuperacion del sistema
 
-    Garantiza la consistencia de la BD durante la ejecucion concurrente de transacciones -> Modulo de control de concurrencia
+    Garantiza la consistencia de la base de datos durante la ejecucion concurrente de transacciones -> Modulo de control de concurrencia
 
     Evaluar y optimizar sentencias SQL -> Procesador y optimizador de consultas
 
@@ -39,11 +39,11 @@ Flechas 3. Relaciona cada elemento del modelo E-R con su definicion:
 
 Flechas 4. Relaciona cada elemento con su representacion en el diagrama E-R:
 
-    Conexiones entre los objetos de la BD -> Relaciones: Rombos etiquetados
+    Conexiones entre los objetos de la base de datos -> Relaciones: Rombos etiquetados
 
-    Aquel objeto (real o abstracto) acerca del cual queremos almacenar informacion en la BD -> Entidad: Rectangulo nominal
+    Aquel objeto (real o abstracto) acerca del cual queremos almacenar informacion en la base de datos -> Entidad: Rectangulo nominal
 
-    Representan las propiedades de los objetos en la BD y las propiedades de sus asociaciones entre ellos -> Atributos: Elipses con nombre en su interior
+    Representan las propiedades de los objetos en la base de datos y las propiedades de sus asociaciones entre ellos -> Atributos: Elipses con nombre en su interior
 
 Flechas 5. Relaciona cada operacion de Algebra Relacional:
 
@@ -79,7 +79,7 @@ Flechas 7. Relaciona cada nombre de etapa de diseño con lo que implica:
 
     esta actividad tiene como objetivo descubir el conjunto de requisitos de informacion y de proceso, que la organizacion necesita -> analisis
 
-    esta tarea consiste en la incorporacion del SI diseñado a la organizacion con la puesta en marcha de la BD y de las aplicaciones desarrolladas: test de funcionamiento y mantenimiento -> implantacion
+    esta tarea consiste en la incorporacion del SI diseñado a la organizacion con la puesta en marcha de la base de datos y de las aplicaciones desarrolladas: test de funcionamiento y mantenimiento -> implantacion
 
 Flechas 8. Une cada sentencia con lo que realiza
 
@@ -177,7 +177,7 @@ Chequear 9. En cuanto a los esquemas resultado de las distintas fases de desarro
 
     el esquema fisico es lo mas cercano al disco duro, al mantenimiento de ficheros (solucion)
 
-    el esquema conceptual se genera teniendo en cuenta que se va a trabajar en una BD
+    el esquema conceptual se genera teniendo en cuenta que se va a trabajar en una base de datos
 
     ninguno depende de otro, el logico no depende del conceptual, el fisico no depende del conceptual, ...
 
@@ -191,7 +191,7 @@ Chequear 10. En E-R, la generalizacion
 
     puede ser al mismo tiempo parcial,total, disjunta y solapada
 
-Chequear 11. Antes de la llegada de la tecnologica basada en BD, la definicion del fichero estaba incluida en el codigo de los programas por lo que un cambio de un dato en todos los programas que usan ese fichero obligan a
+Chequear 11. Antes de la llegada de la tecnologica basada en bases de datos, la definicion del fichero estaba incluida en el codigo de los programas por lo que un cambio de un dato en todos los programas que usan ese fichero obligan a
 
     reversionar
 
@@ -205,7 +205,7 @@ Chequear 12. El lenguaje de definicion de datos
 
     es parte de la definicion del modelo de datos (solucion)
 
-    me permite construir un esquema de, por ejemplo, una BD relacional (solucion)
+    me permite construir un esquema de, por ejemplo, una base de datos relacional (solucion)
 
     tiene como algunos de sus cometidos principales permitirla insercion y modificacion de registros
 
@@ -305,7 +305,7 @@ Chequear 23. Una tabla que no este en FN4
 
     nunca saldra de la transformacion de un esquema E-R a relacional (solucion)
 
-    facilita la posibilidad de introducir inconsistencias en la BD (solucion)
+    facilita la posibilidad de introducir inconsistencias en la base de datos (solucion)
 
 Chequear 24. El entidad-relacion
 
@@ -437,21 +437,21 @@ Escoger 11. Indica cual de estas afirmaciones es cierta: "Una transaccion puede 
 
     El usuario decida anular la transaccion"
 
-    No se hayan salvado a la BD en disco todos los bloques actualizados"
+    No se hayan salvado a la base de datos en disco todos los bloques actualizados"
 
     Alguna restriccion de integridad (en modo inmediato) no se cumpla"
 
 Escoger 12. ¿Qué limitaciones, en la ejecución de transacciones, presenta un SGBD si sólo permite la comprobación de restricciones de integridad en modo inmediato?
 
-    No se podrian realizar actualizaciones  de la BD (solucion)
+    No se podrian realizar actualizaciones de la base de datos (solucion)
 
     No presentaria ninguna limitacion
 
     La propiedad de consistencia no estaria asegurada
 
-    Se podrian procesar algunas transacciones que condujesen a la BD a un estado inconsistente
+    Se podrian procesar algunas transacciones que condujesen a la base de datos a un estado inconsistente
 
-Escoger 13. Considera un SGBD que soporta la comprobacion de restricciones en modo inmediato y diferido y una BD definida en el sistema con R1, ...,Rn restricciones de integridad (alguna con modo inicial diferido). En esa BD se va a ejecutar una transaccion T=<O1, ..., Om>. En la ejecucion, la operacion Oi viola la restriccion Rk (definida con modo inicial inmediato). ¿Cual de las siguientes afirmaciones es CIERTA?
+Escoger 13. Considera un SGBD que soporta la comprobacion de restricciones en modo inmediato y diferido y una base de datos definida en el sistema con R1, ...,Rn restricciones de integridad (alguna con modo inicial diferido). En esa base de datos se va a ejecutar una transaccion T=<O1, ..., Om>. En la ejecucion, la operacion Oi viola la restriccion Rk (definida con modo inicial inmediato). ¿Cual de las siguientes afirmaciones es CIERTA?
 
     La operacion Oi se rechaza y prosigue el procesamiento del resto de operaciones de la transaccion (solucion)
 
@@ -477,11 +477,11 @@ Escoger 15. ¿Donde se encuentra la informacion que necesita el SGBD para locali
 
     Esta informacion la envia, al SGBD, el usuario en su operacion
 
-    En el esquema fisico de la BD (solucion)
+    En el esquema fisico de la base de datos (solucion)
 
-    En el esquema externo de la BD utilizado por el usuario en su consulta
+    En el esquema externo de la base de datos utilizado por el usuario en su consulta
 
-Escoger 16. ¿Es posible que los cambios de una transaccion confirmada definitivamente por el SGBD no esten grabados en la BD en disco? 
+Escoger 16. ¿Es posible que los cambios de una transaccion confirmada definitivamente por el SGBD no esten grabados en la base de datos en disco? 
 
     No, porque el SGBD solo confirma una transaccion cuando se asegura de que los cambios de la transaccion han sido grabados en disco
 
@@ -491,7 +491,7 @@ Escoger 16. ¿Es posible que los cambios de una transaccion confirmada definitiv
 
     No, porque el SGBD transfiere los bloques actualizados por la transaccion inmediatamente despues de confirmarla definitivamente
 
-Escoger 17. ¿Es posible que los cambios de una transaccion aun no confirmada por el usuario esten grabados en la BD en disco?
+Escoger 17. ¿Es posible que los cambios de una transaccion aun no confirmada por el usuario esten grabados en la base de datos en disco?
 
     No, porque los cambios realizados por una transaccion solo pueden grabarse en disco despues de la confirmacion del usuario
 
@@ -521,13 +521,13 @@ Escoger 19. Una base de datos es:
 
     Un conjunto de datos almacenados con una estructura que refleje las interrelaciones del mundo real, que permita almacenar restricciones semanticas y que pueda ser utilizado por multiples aplicaciones (solucion)
 
-Escoger 20. Los datos almacenados en una BD no pueden compartirse entre distintas aplicaciones
+Escoger 20. Los datos almacenados en una base de datos no pueden compartirse entre distintas aplicaciones
 
     Verdadero
 
     Falso (solucion)
 
-Escoger 21. Los sistemas de BD jerarquicas se clasifican como:
+Escoger 21. Los sistemas de base de datos jerarquicas se clasifican como:
 
     Relacionales
 
@@ -537,7 +537,7 @@ Escoger 21. Los sistemas de BD jerarquicas se clasifican como:
 
     En red
 
-Escoger 22. El catalogo del sistema es una BD creada por el sistema que:
+Escoger 22. El catalogo del sistema es una base de datos creada por el sistema que:
 
     Evita almacenar informacion duplicada sobre el mismo hecho
 
@@ -547,7 +547,7 @@ Escoger 22. El catalogo del sistema es una BD creada por el sistema que:
 
     Almacena la informacion sobre las transacciones abortadas por el sistema
 
-Escoger 23. Las sentencias DDL (Data Definition Language) proporciona/n la/s siguiente/s funcionalidades en cuanto al acceso a la BD:
+Escoger 23. Las sentencias DDL (Data Definition Language) proporciona/n la/s siguiente/s funcionalidades en cuanto al acceso a la base de datos:
 
     Insertar y borrar datos en las tablas
 
@@ -557,9 +557,9 @@ Escoger 23. Las sentencias DDL (Data Definition Language) proporciona/n la/s sig
 
     Insertar, borrar datos en las tablas y Recuperar datos almacenados en una tabla
 
-Escoger 24. Las sentencias DML (Data Manipulation Language) proporcionan las siguientes funcionalidades en cuanto al acceso a la BD:
+Escoger 24. Las sentencias DML (Data Manipulation Language) proporcionan las siguientes funcionalidades en cuanto al acceso a la base de datos:
 
-    Recuperar datos y/o registros de la BD (solucion)
+    Recuperar datos y/o registros de la base de datos (solucion)
 
     Crear restricciones sobre las columnas de una tabla
 
@@ -567,13 +567,13 @@ Escoger 24. Las sentencias DML (Data Manipulation Language) proporcionan las sig
 
     Definir nuevos tipos de datos
 
-Escoger 25. Una de las partes del sistema de gestion de BD es el modulo de optimizacion de consultas que se encarga de rectificar las consultas escritas y ejecutadas por un usuario de forma que toda consulta ejecutada en el sistema sea correcta
+Escoger 25. Una de las partes del sistema de gestion de base de datos es el modulo de optimizacion de consultas que se encarga de rectificar las consultas escritas y ejecutadas por un usuario de forma que toda consulta ejecutada en el sistema sea correcta
 
     Verdadero
 
     Falso (solucion)
 
-Escoger 26. Los SGBD proporcionan lenguajes que se utilizan para la definicion y manipulacion de los datos almacenados en la BD
+Escoger 26. Los SGBD proporcionan lenguajes que se utilizan para la definicion y manipulacion de los datos almacenados en la base de datos
 
     Verdadero (solucion)
 
@@ -585,13 +585,13 @@ Escoger 27. Los sistemas de ficheros se caracterizan por la facilidad a la hora 
 
     Falso (solucion)
 
-Escoger 28. Una BD ayuda a mantener la integridad de los datos
+Escoger 28. Una base de datos ayuda a mantener la integridad de los datos
 
     Verdadero (solucion)
 
     Falso
 
-Escoger 29. Cualquier BD tiene un esquema conceptual y un esquema interno, pero puede tener varios esquemas externos
+Escoger 29. Cualquier base de datos tiene un esquema conceptual y un esquema interno, pero puede tener varios esquemas externos
 
     Verdadero (solucion)
 
@@ -629,13 +629,13 @@ Escoger 32. En el siguiente diagrama Entidad-Relacion que representa una relacio
 
 Escoger 33. El modelo E-R permite representar:
 
-    Solo permite representar las estructuras para representar la BD
+    Solo permite representar las estructuras para representar la base de datos
 
     Ninguna es cierta
 
-    Las estructuras que formaran la BD y las restricciones que limitan las ocurrencias validas de las mismas (solucion)
+    Las estructuras que formaran la base de datos y las restricciones que limitan las ocurrencias validas de las mismas (solucion)
 
-    Las estructuras que formaran la BD, las restricciones que limitan las ocurrencias validas de las mismas y las operaciones que se podran realizar sobre la BD
+    Las estructuras que formaran la base de datos, las restricciones que limitan las ocurrencias validas de las mismas y las operaciones que se podran realizar sobre la base de datos
 
 Escoger 34. Las entidades en el modelo E-R puede ser:
 
@@ -699,7 +699,7 @@ Escoger 40. Una relacion ternaria ...
 
     asocia a dos o mas entidades
 
-Escoger 41. Para almacenar informacion de los proyectos finales de carrera leidos en el departamento se necesita una BD. Se desea almacenar la informacion de los Poyecto final de carrera leidos (titulo, tema, fecha de lectura, paginas), quien ha sido el director del proyecto y quien el proyectando. El diagrama E-R siguiente intenta representar esos hechos. Sabiendo que un proyectando solo puede realizar un proyecto final de carrera, pero que un mismo proyecto puede ser compartido entre varios alumnos y que un proyecto lo pueden dirigir varios tutores. Indica la respuesta correcta:
+Escoger 41. Para almacenar informacion de los proyectos finales de carrera leidos en el departamento se necesita una base de datos. Se desea almacenar la informacion de los Poyecto final de carrera leidos (titulo, tema, fecha de lectura, paginas), quien ha sido el director del proyecto y quien el proyectando. El diagrama E-R siguiente intenta representar esos hechos. Sabiendo que un proyectando solo puede realizar un proyecto final de carrera, pero que un mismo proyecto puede ser compartido entre varios alumnos y que un proyecto lo pueden dirigir varios tutores. Indica la respuesta correcta:
 
     La cardinalidad es Realiza(Tutor(1,1), Proyectos-Proyectando(1,1))
 
@@ -815,7 +815,7 @@ Escoger 54. La clave ajena y la clave primaria se deben definir sobre el mismo d
 
     Falso
 
-Escoger 55. NULL en BD relacionales representa la ausencia de valor
+Escoger 55. NULL en bases de datos relacionales representa la ausencia de valor
 
     Verdadero (solucion)
 
@@ -879,7 +879,7 @@ Escoger 62. Una reunion es equivalente a un producto cartesiano seguido de una r
 
     falso
 
-Escoger 63. La metodologia de BD esta compuesta por 4 fases: analisis, diseño conceptual, diseño logico y diseño fisico
+Escoger 63. La metodologia de base de datos esta compuesta por 4 fases: analisis, diseño conceptual, diseño logico y diseño fisico
 
     verdadero
 
@@ -1185,7 +1185,7 @@ Escoger 98. Una consulta en algebra relacional que sea parecida a "dame todos lo
 
     necesita el operador DIVISION
 
-Escoger 99. Un defecto de normalizacion en una BD relacional puede provocar anomalias
+Escoger 99. Un defecto de normalizacion en una base de datos relacional puede provocar anomalias
 
     al borrar la informacion de una tupla, ya que se pueden estar borrando tuplas de otras tablas involuntariamente
 
@@ -1207,7 +1207,7 @@ Escoger 101. La normalizacion
 
     no es necesaria aunque si recomendable
 
-    es el mejor metodo para diseñar las BD
+    es el mejor metodo para diseñar las bases de datos
 
 Escoger 102. De la arquitectura cliente-servidor
 
@@ -1255,7 +1255,7 @@ Escoger 107. En cuanto a las distintas notaciones del E-R
 
     unas sirven para el esquema conceptual, otras para el logico y otras para el fisico
 
-    nos referimos al nombre que le daremos al esquema de BD
+    nos referimos al nombre que le daremos al esquema de base de datos
 
     nos da igual, podremos obtener un esquema equivalente en cada una de ellas (solucion)
 
@@ -1293,7 +1293,7 @@ Escoger 111. La ordenacion secuencia pura
 
     obliga a una reorganizacion del fichero cada vez que quiero insertar un registro intermedio
 
-Escoger 112. La primera BD, segun algunos autores, fue
+Escoger 112. La primera base de datos, segun algunos autores, fue
 
     Entidad-Relacion, de Chen
 
@@ -1321,13 +1321,13 @@ Escoger 114. El modelo relacional fue desarrollado teoricamente por
 
 Escoger 115. La arquitectura cliente-servidor se basa en
 
-    la existencia de fragmentos de la BD geograficamente dispersos
+    la existencia de fragmentos de la base de datos geograficamente dispersos
 
-    la existencia de procesos que solicitan informacion y otros que la extraen de las BD (solucion)
+    la existencia de procesos que solicitan informacion y otros que la extraen de las base de datos (solucion)
 
     la existencia de un grupo de usuarios que solicitan la informacion directamente al SGBD
 
-Escoger 116. Para evitar redundancias en una BD relacional
+Escoger 116. Para evitar redundancias en una base de datos relacional
 
     la politica adecuada para incrementar la integridad referencial es la de anular, aunque a veces es decision del diseñador emplear otra politica
 
@@ -1377,7 +1377,7 @@ Escoger 121. Los sitemas de informacion
 
     son modelos de datos
 
-Escoger 122. La definicion de relaciones (tablas) en una BD relacional establece las propiedades (del sistema de informacion que representan)
+Escoger 122. La definicion de relaciones (tablas) en una base de datos relacional establece las propiedades (del sistema de informacion que representan)
 
     de registros
 
@@ -1399,7 +1399,7 @@ Escoger 124. En cuanto a la cuarta y quinta forma normal
 
     se necesitan porque hay ciertas tablas optimas desde el punto de vista de las dependencias funcionales pero en las que aun se observa cierta redundancia (solucion)
 
-    algunos autores cifran en mas de un 60% la cantidad de tablas que incumplen alguna de estas formas normales en una muestra de 40 BD relacionales
+    algunos autores cifran en mas de un 60% la cantidad de tablas que incumplen alguna de estas formas normales en una muestra de 40 bases de datos relacionales
 
 Escoger 125. Al decir que un SGBD vela por la integridad de los datos, nos referimos a que
 
@@ -1453,7 +1453,7 @@ Escoger 130. Una especificacion de correspondencia entre clases Card(T,x) = (1,N
 
     se da cuando hay 2 claves ajenas, cada una en una tabla distinta, que "trabajan" para la misma relacion "X"
 
-    es imposible en un esquema de BD relacionales (solucion)
+    es imposible en un esquema de base de datos relacionales (solucion)
 
 Escoger 131. Una clave candidata puede contener nulos
 
@@ -1545,11 +1545,11 @@ Escoger 141. La organizacion aleatoria calculada (hash)
 
 Escoger 142. La definicion de tablas en un SGBD relacional constituye
 
-    la cardinalidad de la BD
+    la cardinalidad de la base de datos
 
-    el esquema de la BD (solucion)
+    el esquema de la base de datos (solucion)
 
-    el estado de la BD
+    el estado de la base de datos
 
 Escoger 143. Si una relacion se define en funcion de sus atributos como R(a,b,c) y (a,b) es clave primaria,
 
@@ -1605,7 +1605,7 @@ Escoger 149. Ventajas de la arquitectura cliente-servidor
 
     los datos estan en el cliente y es el servidor el que da formato a esos datos para presentarlos en pantalla
 
-    centralizar grandes BD en una sola maquina serivodor, eliminando toda redundancia posible
+    centralizar grandes bases de datos en una sola maquina serivodor, eliminando toda redundancia posible
 
 Escoger 150. Una tabla en el modelo relacional
 
@@ -1651,7 +1651,7 @@ Escoger 155. Los esquemas externos se pueden ver como
 
     el nivel de la arquitectura de un SGBD que permite evitar el gran abismo entre esquema conceptual y esquema interno
 
-    subconjuntos del esquema interno que describe toda la BD
+    subconjuntos del esquema interno que describe toda la base de datos
 
     descripciones de subconjuntos de datos y relaciones entre ellos, de interes para una o varias aplicaciones dadas (solucion)
 
@@ -1777,7 +1777,7 @@ Escoger 170. Las bases de datos NoSQL son adecuadas
 
 Escoger 171. Cuando utilizamos tecnologia NoSQL para el almacenamiento y recuperacion de datos
 
-    podemos estar tan seguros como en una BD relacional de que nuestros datos son consistentes, sin errores de correspondencia
+    podemos estar tan seguros como en una base de datos relacional de que nuestros datos son consistentes, sin errores de correspondencia
 
     es porque nos preocupa que las claves ajenas cumplan con la integridad referencial
 
@@ -1785,11 +1785,11 @@ Escoger 171. Cuando utilizamos tecnologia NoSQL para el almacenamiento y recuper
 
 Escoger 172. La tecnologia NoSQL nace, entre otras razones
 
-    por facilitar y abaratar el escalado horizontal los sistemas de BD (solucion)
+    por facilitar y abaratar el escalado horizontal los sistemas de base de datos (solucion)
 
-    porque es mas facil programar con este tipo de BD
+    porque es mas facil programar con este tipo de base de datos
 
-    debido a que las BD relacionales no permiten tener los datos distribuidos geograficamente
+    debido a que las bases de datos relacionales no permiten tener los datos distribuidos geograficamente
 
 Escoger 173. Las bases de datos NoSQL son mas rapidas que las relacionales:
 
@@ -1893,19 +1893,19 @@ Escoger 183. Los metadatos son:
 
 Escoger 184. ¿Cual es el principal objetivo del SGBD?
 
-    Contener informacion de los usuarios, manipularla, diseñar BD y utilizar sus lenguajes
+    Contener informacion de los usuarios, manipularla, diseñar base de datos y utilizar sus lenguajes
 
     Compartir datos a los usuarios
 
-    Proporcionar una forma de describir, recuperar y manipular los datos integrados en la BD, asegurando confidelidad y seguridad (solucion)
+    Proporcionar una forma de describir, recuperar y manipular los datos integrados en la base de datos, asegurando confidelidad y seguridad (solucion)
 
 Escoger 185. Segun su modelo de datos
 
-    Las BD jerarquicas se basan en la Logistica Clasica
+    Las bases de datos jerarquicas se basan en la Logistica Clasica
 
-    Las BD relacionales se basan en la Teoria de Conjuntos (solucion)
+    Las bases de datos relacionales se basan en la Teoria de Conjuntos (solucion)
 
-    Las BD relacionales se basan en la Logica Clasica
+    Las bases de datos relacionales se basan en la Logica Clasica
 
 Escoger 186. Indique la respuesta correcta respecto al incumplimiento de las formas normales en un esquema de base de datos:
 
@@ -1966,3 +1966,701 @@ Escoger 192. La variable :new
     Se puede usar en la clausula WHERE de una sentencia SQL, pero no en PL/SQL
 
     Se puede utilizar en el cuerpo de un trigger "for each row" (solucion)
+
+Escoger 193. En el modelo Entidad-Interrelacion dos tipos de entidades relacionadas con cardianlidad (1,1)-(1,1) y con diferente identificador ...
+
+    Describe tipos de entidades fuertes relacioandas (solucion)
+
+    Uno de los tipos de entidades es debil
+
+    No pueden darse este tipo de relaciones y se trata de un error de diseño
+
+    Debe tener un identificador candidato comun
+
+Escoger 194. Una base de datos:
+
+    Contiene ficheros, archivos e indices
+
+    Es una coleccion de ficheros relacionados entre si
+
+    Necesariamente esta formada por una metabase de datos (solucion)
+
+    Elimina todos los problemas en los datos producidos por el uso de programas construidos con lenguajes de tercera y cuarta generacion
+
+Escoger 195. Una base de datos debe ser integra...
+
+    Para garantizar la veracidad de los datos (solucion)
+
+    Para que no se pierdan los datos y esten relacionados
+
+    Para que los datos sean seguros y esten bien almacenados
+
+    Si no, no seria una base de datos
+
+Escoger 196. La ligadura conceptual...
+
+    Afecta al desempeño de la base de datos
+
+    Es dependiente del SGBD
+
+    Ninguna es correcta (solucion)
+
+    Se realiza entre la vision conceptual y logica
+
+Escoger 197. En los SGBD relacionales...
+
+    La vision fisica puede ser modificada por el UML
+
+    Ninguna de las respuestas es correcta
+
+    El DSDL es un lenguaje especifico para manipular la vision fisica
+
+    El DML y el DSDL es el mismo lenguaje (solucion)
+
+Escoger 198. Dada una relacion R(a,b,c), si para cada valor de 'a', el atributo 'b' puede tomar 6 valores y el atributo 'c' puede tomar cualquier valor...
+
+    La relacion no esta en FNBC
+
+    Existe una dependencia funcional
+
+    Existe una dependencia de union
+
+    Existe una dependencia multivaluada (solucion)
+
+Escoger 199. En una base de datos, la privacidad de los datos es...
+
+    Garantizada por el UML
+
+    Definida por los requisitos del modelo de negocio y gestionada por los desarrolladores
+
+    Definida y controlada por el administrador de la base de datos (solucion)
+
+    Gestionada por los desarrolladores de los programas de aplicacion
+
+Escoger 200. En el modelo Entidad-Interrelacion...
+
+    Un tipo de entidad es debil por identificacion porque no es debil por existencia
+
+    Un tipo de entidad es debil por identificacion por la naturaleza del problema y no se puede remediar (solucion)
+
+    Un tipo de entidad es debil por identificacion porque existen tipos de entidades fuertes con las que esta relacionada
+
+    Un tipo de entidad es debil por identificacion porque hay un tipo de interrelacion debil por identificacion
+
+Escoger 201. Una base de datos...
+
+    No puede contener informacion desconocida
+
+    La informacion desconocida esta oculta al usuario
+
+    La informacion desconocida es un dato conocido (solucion)
+
+    La informacion desconocida no se puede manejar ni consultar
+
+Escoger 202. En el modelo Entidad-Interrelacion los tipos de interrelaciones (1,1)-(1,1)-(1,1) y con el mismo identificador...
+
+    No pueden darse este tipo de relaciones y se trata de un error de diseño (solucion)
+
+    Describen un tipo de entidad cuyos atributos es conveniente describirlos por separado
+
+    Deben unirse en un mismo tipo de entidad
+
+    Deben tener un identificador candidato comun
+
+Escoger 203. La vision conceptual y logica:
+
+    Deben ser creadas por la misma o el mismo grupo de personas para garantizar el correcto diseño
+
+    Se generan al mismo tiempo cuando se conoce el SGBD
+
+    Pueden ser la misma (solucion)
+
+    Siempre son diferentes
+
+Escoger 204. En el modelo Entidad-Interrelacion...
+
+    Existe un maximo numero de tipos de entidades que participan en un tipo de interrelacion
+
+    El conjunto de interrelaciones no puede ser nulo, sino no habria relaciones entre entidades
+
+    Los tipos de interrelaciones son rombos con nombre
+
+    Los tipos de interrelaciones relacionan uno o infinitos conjuntos (solucion)
+
+Escoger 205. Cuando clasificamos
+
+    Proponemos una opinion sobre los objetos de un fenomeno
+
+    No es conveniente clasificar a no ser que sea estrictamente necesario, y en ningun caso en modelos relacionales
+
+    Generalizamos sobre los objetos de un fenomeno (solucion)
+
+Escoger 206. En el modelo Entidad-Interrelacion de un tipo de interrelacion (1,1)-(?,n)...
+
+    Debe conocerse el valor de ? para saber como tratarla posteriormente
+
+    No puede darse en ningun caso
+
+    Implica debilidad (solucion)
+
+    Uno de los tipos de entidad hereda el atributo identificador del otro tipo de entidad
+
+Escoger 207. De las siguientes afirmaciones, indica cual es cierta respecto a una base de datos relacional:
+
+    Las relaciones 1:N entre los datos se representan por tablas
+
+    Los datos se representan en tablas, las relaciones entre los datos no
+
+    Las relaciones entre los datos son siempre definidas por claves foraneas
+
+    La respuesta a las consultas se configura en forma de tabla (solucion)
+
+Escoger 208. La aplicacion de la FNBC...
+
+    Selecciona a los determinantes funcionales y los define como clave candidata o principal
+
+    Requiere crear los determinantes funcionales
+
+    Elimina los determinantes funcionales y crea nuevas tablas sin redundancia
+
+    Convierte cada determinante funcional en clave principal de una tabla (solucion)
+
+Escoger 209. En una base de datos...
+
+    No existen ficheros como los que se construyen con lenguajes de programacion
+
+    Todos los ficheros estan indexados por una o varias claves para poder garantizar un acceso muy rapido
+
+    Los ficheros son archivos definidos por el usuario
+
+    Puede contener ficheros planos (solucion)
+
+Escoger 210. En el modelo Entidad-Interrelacion...
+
+    Pueden existir atributos que su dominio no este definido previamente
+
+    Los tipos de entidades pueden no tener atributos identificadores
+
+    No existen tipos de entidades sin atributos (solucion)
+
+    Todos los atributos de un tipo de entidad pueden estar definidos en un dominio que admitan el valor NULL
+
+Escoger 211. En el modelo Entidad-Interrelacion los subtipos de entidad...
+
+    Son inclusivos para poder tomar varios valores el atributo clasificador
+
+    Son inclusivos cuando tienen atributos diferentes
+
+    Son inclusivos cuando el atributo clasificador puede tomar dos o mas valores a la vez
+
+    Son inclusivos cuando el atributo clasificador puede tomar mas diferente para cada subtipo (solucion)
+
+Escoger 212. Las formas normales se aplican...
+
+    Para eliminar las dependencias funcionales en las tablas (solucion)
+
+    Para evitar las dependencias funcionales en las tablas
+
+    Para tener tablas mas finas
+
+    Para independizar las dependencias funcionales en las tablas
+
+Escoger 213. La determinacion de los limites de un fenomeno o problema del mundo real...
+
+    Esta definida por los objetos del modelo (solucion)
+
+    Es una frontera abstracta que se define al comienzo del modelado
+
+    Es determinada por el diseñador del modelo
+
+    Nunca puede considerar objetos independientes no relacionados
+
+Escoger 214. Dada la relacion R(a,b,c,d), si a->b, y a->c...
+
+    a es la clave principal
+
+    Se cumple que a->(b+c) (solucion)
+
+    Entonces a->b es incompleta
+
+    Entonces b y c es un agregado de datos
+
+Escoger 215. Dadas las siguientes tablas: R1(a,b,c,d,e) y R2(c,f,g)...
+
+    Esta presente una dependencia funcional R1.c->R2.c
+
+    R1.c podra tomar valores nulos (solucion)
+
+    Es un error de diseño relacional
+
+    R2 deberia eliminarse y sus atributos parar a R1
+
+Escoger 216. No existen bases de datos...
+
+    Que no esten basadas en un modelo de datos (solucion)
+
+    Que hayan tenido una caida alguna vez
+
+    Que sean menores de 500 Kb
+
+    Que puedan ser accedidas desde lenguajes de tercera generacion
+
+Escoger 217. Los modelos de datos...
+
+    Requieren de un SGBD para su uso
+
+    Estaticos son graficos y dinamicos son tabulares
+
+    Pueden ser vistos como reglas que describen un fenomeno (solucion)
+
+    Estaticos son graficos
+
+Escoger 218. En el modelo Entidad-Interrelacion...
+
+    Los dominios son la extension de los atributos
+
+    Ninguna de las respuestas es correcta
+
+    Los atributos no tienen extension
+
+    La extension de un atributo esta restringida por un dominio (solucion)
+
+Escoger 219. Los SGBD permiten que:
+
+    Los programas de aplicacion realizados en algunos lenguajes de programacion deben incluir sentencias del DML para acceder a los datos (solucion)
+
+    Los programas de aplicacion realizados en algunos lenguajes de programacion no pueden acceder a los datos de la base de datos de la vision fisica
+
+    Los programas de aplicacion realizados en algunos lenguajes de programacion pueden acceder directamente a los datos
+
+    Los programas de aplicacion realizados en algunos lenguajes de programacion deben estar incluidos en el diccionario de datos
+
+Escoger 220. La vision fisica de la base de datos:
+
+    Es dependiente del SGBD y del administrador de la base de datos (solucion)
+
+    Es dependiente del SGBD
+
+    Solo depende de la vision logica
+
+    Es independiente del SGBD
+
+Escoger 221. Una granularidad alta:
+
+    Facilita la creacion de la vision externa
+
+    Es posible en las bases de datos relacionales
+
+    Incrementa la independencia (solucion)
+
+    Simplifica los programas de aplicacion
+
+Escoger 222. Los atributos de una tabla en el modelo relacional...
+
+    Representan siempre conjuntos relacionados
+
+    Representan siempre a los atributos de las relaciones entre objetos, incluso consigo mismo
+
+    Representan siempre a los atributos de un objeto y/o relaciones entre objetos (solucion)
+
+    Representan siempre a los atributos de un object
+
+Escoger 223. En el modelo jerarquico...
+
+    Para acceder al tipo de registro hijo es necesario acceder a un registro padre (solucion)
+
+    Todas las respuestas son correctas
+
+    Se puede acceder a cualquier tipo de registro hijo desde el nodo raiz
+
+    Los registros de cualquier tipo pueden ser accedidos con punteros definidos por el usuario
+
+Escoger 224. Mediante un modelo de datos...
+
+    Se determinan los limites del problema
+
+    Se activan las reglas para manejar la informacion de un problema del mundo real
+
+    Se da solucion a un problema del mundo real
+
+    Se representa los objetos, relaciones y comportamiento de un fenomeno o problema del mundo real (solucion)
+
+Escoger 225. En el modelo jerarquico...
+
+    Ninguna respuesta es correcta
+
+    El orden de los registros es siempre segun el orden de insercion
+
+    Los registros no estan ordenados
+
+    Los registros pueden estar ordenados de muchas formas (solucion)
+
+Escoger 226. En el modelo Entidad-Interrelacion los subtipos de entidad...
+
+    No pueden mantener tipos de interrelaciones con el supertipo de entidad
+
+    Se pueden relacionar entre ellos si tienen atributos diferentes
+
+    Se pueden relacionar entre ellos y con el supertipo de entidad (solucion)
+
+    No pueden mantener tipos de interrelaciones entre ellos
+
+Escoger 227. La FN2...
+
+    Elimina de la relacion dependencias funcionales de aumento
+
+    Elimina de la relacion dependencias funcionales debidas a atributos multiples
+
+    Elimina de la relacion dependencias funcionales incompletas (solucion)
+
+    Elimina de la relacion dependencias funcionales reflexivas
+
+Escoger 228. En el modelo Entidad-Interrelacion los tipos de interrelaciones (1,1)...
+
+    Aparecen cuando los dos tipos de entidades tienen el mismo identificador principal
+
+    Aparecen cuando los dos tipos de entidades tienen los mismos identificadores candidatos
+
+    Aparecen por una debilidad por identificacion
+
+    Representan tipos de entidades fuertes (solucion)
+
+Escoger 229. El administrador de la base de datos
+
+    Selecciona el lenguaje de manipulacion de datos
+
+    Ninguna es correcta
+
+    Selecciona el lenguaje para definir los datos
+
+    Selecciona las estructuras fisicas de la base de datos (solucion)
+
+Escoger 230. En el modelo Entidad-Interrelacion, si un tipo de entidad es un rectangulo y un tipo de interrelacion es un rombo...
+
+    Ninguna de las respuestas es correcta (solucion)
+
+    Una entidad es un rectangulo y una interseccion es un arco
+
+    Una entidad es un arco y una interrelacion es un rombo
+
+    Una entidad es un rectangulo y una interrelacion es un rombo
+
+Escoger 231. Una base de datos semantica es:
+
+    Una base de datos relacional con informacion de los atributos y relaciones
+
+    Una base de datos basada en un modelo conceptual que incluye la semantica del modelo (solucion)
+
+    Ninguna es correcta
+
+    Una metabase de una base de datos que describe la semantica de los atributos
+
+Escoger 232. Un modelo que no tenga supertipos de objetos...
+
+    Carece de subtipos de objetos (solucion)
+
+    No se habra aplicado el mecanismo de clasificacion
+
+    Es demasiado simple para representar un problema y posiblemente estara incompleto
+
+    Sera un modelo que sufrira de redundancia en su implementacion
+
+Escoger 233. Cuando se construye un modelo relacional de un problema:
+
+    Se pueden usar todos los mecanismos de la abstraccion
+
+    No se pueden agregar subtipos de objetos
+
+    Los supertipos de objetos son tablas
+
+    El refinamiento genera nuevas tablas (solucion)
+
+Escoger 234. En el modelo Entidad-Interrelacion los tipos de interrelaciones (1,1)-(0,1) y no compartiendo el mismo identificador...
+
+    Representan una debilidad de dominio de los atributos del tipo de entidad que participa con cardinalidad (0,1)
+
+    Pueden compartir identificadores candidatos
+
+    Representan una relacion padre-hijo (solucion)
+
+    Ninguna es correcta
+
+Escoger 235. En el modelo Entidad-Interrelacion...
+
+    El dominio de un atributo identificador debe ser pequeño
+
+    El dominio de un atributo identificador debe ser literal o numerico
+
+    Ninguna es correcta (solucion)
+
+    El dominio de un atributo identificador puede ser de cualquier tipo excepto NULL
+
+Escoger 236. En el modelo Entidad-Interrelacion los tipos de interrelaciones ternarias...
+
+    Deben ser descompuestas siempre en tipos de interrelaciones binarias
+
+    Su existencia es debido a errores de diseño
+
+    Alguno de los tipos de entidad puede ser debil por identificacion
+
+    Son muy comunes en muchos problemas del mundo real (solucion)
+
+Escoger 237. Un producto cartesiano de R1(a,b,c) con 10 tuplas y R2(a,b,c) con 20 tuplas, da como resultado
+
+    Un error porque es la misma tabla
+
+    Una tabla R3(a,b,c,a,b,c) con 200 tuplas (solucion)
+
+    Una tabla R3(a,b,c) con 200 tuplas
+
+    Una tabla R3(a,b,c,a,b,c) con maximo de 20 tuplas
+
+Escoger 238. En el modelo Entidad-Interrelacion...
+
+    La intencion de una entidad es definida por la agregacion de un conjunto de dominios (solucion)
+
+    La intencion de una entidad no se conoce hasta que no toma valores
+
+    La intencion de una entidad tiene valores fijos
+
+    Una entidad no tiene intencion
+
+Escoger 239. Dada la relacion R(a,b,c,d), si a->b, y b equivale (c,d)...
+
+    Entonces c->d
+    
+    Entonces a->c (solucion)
+
+    Entonces a->b es incompleta
+
+    a es la clave principal
+
+Escoger 240. DML es un lenguaje...
+
+    Que permite la creacion de subesquemas (solucion)
+
+    Que posibilita manipular y modificar la vision logica
+
+    Procedimental que aumenta el desempeño de la base de datos
+
+    No procedimental que garantiza la integridad de la base de datos
+
+Escoger 241. En el modelo relacional, si dos tablas tienen la misma clave principal y a la vez foranea...
+
+    Debe definirse como alterna
+
+    Existe un error de diseño
+
+    Deben definirse las dos como alterna o eliminar una de las foraneas
+
+    Las claves foraneas no pueden tomar valores NULL (solucion)
+
+Escoger 242. En el modelo en red:
+
+    Los tipos de registros ficticios representan relaciones ternarias
+
+    Los tipos de registros ficticios nunca generan redundancia de informacion
+
+    Los tipos de registros ficticios no pueden contener atributos redundantes
+
+    Los tipos de registros ficticos suelen contener atributos redundantes (solucion)
+
+Escoger 243. Los modelos de datos...
+
+    Pueden ser estaticos, dinamicos, temporales, aleatorios,..., de muchos tipos a la vez
+
+    Siempre describen la estatica y dinamica de un fenomeno o problema
+
+    Son parte del SGBD
+
+    Pueden describir la incertidumbre del problema (solucion)
+
+Escoger 244. Los usuarios son considerados un componente mas del SGBD...
+
+    Debido a que conocen y manejan el SGBD
+
+    Algunos son tecnicos que crean objetos de la base de datos
+
+    Tienen privilegios para introducir, modificar y borrar datos
+
+    Son parte del sistema de informacion el que se usa la base de datos (solucion)
+
+Escoger 245. La interseccion de dos tablas...
+
+    Genera una tabla con tantas tuplas como la diferencia de las tuplas de ambas tablas
+
+    Genera una tabla con tantas tuplas como tuplas tengan las dos tablas
+
+    Genera una tabla con las tuplas no repetidas de ambas tablas
+
+    Gera una tabla con tantas tuplas como tuplas comunes exista en ambas tablas (solucion)
+
+Escoger 246. Una base de datos...
+
+    Representa un instante de un problema del mundo real (solucion)
+
+    Representa la informacion acerca de un problema del mundo real
+
+    Representa un problema del mundo real y todas sus caracteristicas
+
+    Es la solucion para representar los problemas del mundo real
+
+Escoger 247. En el modelo relacional, una dependencia funcional...
+
+    Debe ser siempre completa
+
+    Existe por un error de diseño y por eso debe eliminarse
+
+    Existe por la existencia de una relacion de dominio entre dos atributos (solucion)
+
+    Existe por la existencia de una relacion entre dos atributos simples
+
+Escoger 248. La agregacion es un mecanismo de la abstraccion para...
+
+    Describir las partes de otra abstraccion (solucion)
+
+    Para describir las propiedades en una especializacion
+    
+    Para llevar a cabo la creacion de un objeto
+
+    Para refinar un objeto complejo
+
+Escoger 249. En una base de datos...
+
+    Los atributos son datos independientes en la base de datos
+
+    Los atributos son metadatos asociados a otros metadatos (solucion)
+
+    Los atributos son datos de otra base de datos
+
+    Los atributos son metadatos definidos para garantizar la integridad
+
+Escoger 250. El modelo Entidad-Interrelacion surge...
+
+    Como un modelo conceptual independiente del SGBD (solucion)
+
+    Por los problemas del modelo en Red
+
+    Porque Peter Chen hizo su tesis doctoral
+
+    Para ayudar a diseñar bases de datos conceptuales, traspasando los modelos EE-R a relaciones facilmente
+
+Escoger 251. En el modelo Entidad-Interrelacion los tipos de interrelaciones (1,1)-(0,1) compartiendo el mismo identificador...
+
+    Atributos de un mismo tipo de objeto que ha sido conveniente representarlos por separado
+
+    La existencia de una debilidad de dominio
+
+    Todas son correctas (solucion)
+
+    Pueden unirse en un mismo tipo de entidad definiendo los atributos del tipo de entidad que participa (0,1) en un dominio que pueda tomar valores nulos
+
+Escoger 252. La ligadura logica:
+
+    Relaciona la vision canonica y fisica
+
+    Relaciona los programas de aplicacion con la vision logica
+
+    Relaciona una vision externa con la vision logica (solucion)
+
+    Relaciona la vision logica y conceptual
+
+Escoger 253. Dada la siguiente informacion, determinar en que forma normal se encuentra: R1(a,b,c,d,e), R2(f,g,h); (a+b)->c,d,e; f->g,h; c->g
+
+    R1 en FN3 y R2 en FNBC
+
+    Ninguna es correcta
+
+    R1 en FN2 y R2 en FN1
+
+    R1 en FNBC y R2 en FNBC (solucion)
+
+Escoger 254. De los siguientes campos de un tipo de entidad, indica cual podria ser un identificador candidato:
+
+    Nombre y apellidos
+
+    Cualquiera de ellos (solucion)
+
+    Documento Nacional de Identidad
+
+    Puesto de Direccion/Responsabilidad
+
+Escoger 255. En el modelo Entidad-Interrelacion un tipo de interrelacion (1,1)-(?,n)...
+
+    Implica debilidad (solucion)
+
+    Uno de los tipos de entidad hereda el atributo identificador del otro tipo de entidad
+
+    No puede darse en ningun caso
+
+    Debe conocerse el valor de ? para saber como tratarla posteriormente
+
+Escoger 256. En el modelo Entidad-Interrelacion los subtipos de entidad...
+
+    Tienen los mismos atributos
+
+    No necesariamente tienen los mismos atributos (solucion)
+
+    No se pueden especializar pero si mantener otros tipos de interrelaciones
+
+    Tienen exactamente los mismos atributos que el supertipo de entidad
+
+Escoger 257. Dada la relacion R(a,b,c,d), siendo a y b claves candidatas...
+
+    Se cumple que (a+c)->(b+c) (solucion)
+
+    Se cumple que (a+c)->(b+d)
+
+    Se cumple que (a+c)->b
+
+    El atributo a debe ser simple y se cumple que a->b
+
+Escoger 258. Aplicamos la FN1
+
+    Para eliminar los atributos compuestos
+
+    Para eliminar los atributos multiples (solucion)
+
+    Para eliminar las dependencias funcionales incompletas
+
+    Para eliminar las dependencias funcionales completas
+
+Escoger 259. En el modelo Entidad-Interrelacion un supertipo de entidad...
+
+    No puede relacionarse con uno o varios de sus subtipos de entidad
+
+    Puede relacionarse con cualquier supertipo de entidad incluido el mismo (solucion)
+
+    Debe estar relacionado con algun otro tipo de entidad
+
+    Ninguna es correcta
+
+Escoger 260. En el modelo Entidad-Interrelacion...
+
+    Las entidades debiles por identificacion pueden no tener atributos identificadores
+
+    Las entidades debiles por identificacion tienen un atributo compuesto como identificador (solucion)
+
+    Las entidades debiles por identificacion no son debiles por existencia, y tienen como atributos identificadores uno o varios
+
+    Las entidades debiles por identificacion tienen como identificador el identificador de la entidad fuerte
+
+Escoger 261. En el modelo Entidad-Interrelacion un supertipo de entidad...
+
+    No tiene atributos clasificadores
+
+    Tiene al menos un atributo clasificador
+
+    Tiene un solo atributo clasificador (solucion)
+
+    Se especializa en uno o muchos subtipos de entidad
+
+Escoger 262. La versatilidad de las bases de datos es una caracteristica que:
+
+    Hace versatiles a las bases de datos
+
+    Simplifica la capacidad de acceso
+
+    Simplifica la representacion del problema (solucion)
+
+    Aumenta el desempeño fisico
