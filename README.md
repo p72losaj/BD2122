@@ -2315,7 +2315,7 @@ Escoger 227. La FN2...
 
     Elimina de la relacion dependencias funcionales reflexivas
 
-Escoger 228. En el modelo Entidad-Interrelacion los tipos de interrelaciones (1,1)...
+Escoger 228. En el modelo Entidad-Interrelacion los tipos de interrelaciones (1:1)...
 
     Aparecen cuando los dos tipos de entidades tienen el mismo identificador principal
 
@@ -2715,7 +2715,7 @@ Escoger 267. Conocidas las proridades que participan en un problema del mundo re
 
     Generalizacion y agregacion (solucion)
 
-Escoger 168. En el modelo relacional, si dos tablas tienen la misma clave principal y a la vez foranea...
+Escoger 268. En el modelo relacional, si dos tablas tienen la misma clave principal y a la vez foranea...
 
     Existe un error de diseño
 
@@ -2725,7 +2725,7 @@ Escoger 168. En el modelo relacional, si dos tablas tienen la misma clave princi
 
     Representa relaciones fuertes (1,1) o (1,n) entre tipos de entidades
 
-Escoger 169. En el modelo Entidad-Interrelacion...
+Escoger 269. En el modelo Entidad-Interrelacion...
 
     El identificador principal de una entidad nunca puede ser NULL, pero el candidato puede no tomar valor
 
@@ -2735,7 +2735,7 @@ Escoger 169. En el modelo Entidad-Interrelacion...
 
     El dominio de un identificador alternativo y candidato debe ser diferente al identificador principal
 
-Escoger 170. En el modelo relacional, una dependencia funcional
+Escoger 270. En el modelo relacional, una dependencia funcional
 
     Considera la dependencia entre dos atributos de una tabla (solucion)
 
@@ -2745,7 +2745,7 @@ Escoger 170. En el modelo relacional, una dependencia funcional
 
     Considera los valores de los atributos de una tabla que esten relacionados
 
-Escoger 171. En el modelo jerarquico...
+Escoger 271. En el modelo jerarquico...
 
     Los punteros siempre apuntan del tipo de registro padre al hijo
 
@@ -2755,7 +2755,7 @@ Escoger 171. En el modelo jerarquico...
 
     Ninguna de las anteriores (solucion)
 
-Escoger 172. En el modelo jerarquico...
+Escoger 272. En el modelo jerarquico...
 
     Ninguna es correcta (solucion)
 
@@ -2765,7 +2765,7 @@ Escoger 172. En el modelo jerarquico...
 
     Las relaciones (n:n) no se pueden implementar
 
-Escoger 173. En el modelo relacional...
+Escoger 273. En el modelo relacional...
 
     En esquemas diferentes las tablas pueden tener igual nombre (solucion)
 
@@ -2775,7 +2775,7 @@ Escoger 173. En el modelo relacional...
 
     Las tablas pueden ser estaticas y dinamicas segun se nominen
 
-Escoger 174. En el modelo Entidad-Interrelacion...
+Escoger 274. En el modelo Entidad-Interrelacion...
 
     La debilidad por fortaleza de otras entidades da lugar a entidades debiles
 
@@ -2785,7 +2785,7 @@ Escoger 174. En el modelo Entidad-Interrelacion...
 
     La entidad es debil por la naturaleza del problema (solucion)
 
-Escoger 175. En una tabla del modelo relacional...
+Escoger 275. En una tabla del modelo relacional...
 
     Los atributos pueden estar definidos en dominios simples
 
@@ -2795,7 +2795,7 @@ Escoger 175. En una tabla del modelo relacional...
 
     Los atributos deben estar definidos en dominios diferentes
 
-Escoger 176. La herramienta informatica que permite crear, manipular, gestionar y eliminar los datos y las estructuras de una base de datos es:
+Escoger 276. La herramienta informatica que permite crear, manipular, gestionar y eliminar los datos y las estructuras de una base de datos es:
 
     Una base de datos jerarquica/red
 
@@ -2805,7 +2805,7 @@ Escoger 176. La herramienta informatica que permite crear, manipular, gestionar 
 
     Ninguna es correcta
 
-Escoger 177. En el modelo Entidad-Interrelacion...
+Escoger 277. En el modelo Entidad-Interrelacion...
 
     Los tipos de entidades debiles son dobles rectangulos y los tipos de interrelaciones debiles son dobles rombos
 
@@ -2815,7 +2815,7 @@ Escoger 177. En el modelo Entidad-Interrelacion...
 
     Los tipos de entidades debiles son dobles rectangulos
 
-Escoger 178. Una vision canonica de la base de datos...
+Escoger 278. Una vision canonica de la base de datos...
 
     Es dependiente del SGBD (solucion)
 
@@ -2825,7 +2825,7 @@ Escoger 178. Una vision canonica de la base de datos...
 
     Debe ser derivada de la vision externa
 
-Escoger 179. Un modelo de datos relacional...
+Escoger 279. Un modelo de datos relacional...
 
     Puede estar basado en diferentes teorias
 
@@ -2835,7 +2835,7 @@ Escoger 179. Un modelo de datos relacional...
 
     Debe siempre derivarse de un modelo EE-R (solucion)
 
-Escoger 180. La granularidad...
+Escoger 280. La granularidad...
 
     Afecta a la vision externa (solucion)
 
@@ -2845,7 +2845,7 @@ Escoger 180. La granularidad...
 
     Debe describirse en la vision conceptual
 
-Escoger 181. En el modelo Entidad-Interrelacion...
+Escoger 281. En el modelo Entidad-Interrelacion...
 
     Los atributos derivados solo pueden ser parte del identificador principal cuando existe una debilidad por identificacion (solucion)
 
@@ -2854,3 +2854,617 @@ Escoger 181. En el modelo Entidad-Interrelacion...
     Los atributos derivados y calculados solo son identificadores si existe una debilidad entre tipos de entidad
 
     Los atributos derivados pueden ser identificadores, los calculados no, aunque haya debilidad
+
+Escoger 282. En el modelo Entidad-Interrelacion los tipos de interrelaciones (1,1)-(0,1) compartiendo el mismo identificador...
+
+    Todas las respuestas son correctas
+
+    La existencia de una debilidad de dominio (solucion)
+
+    Pueden unirse en un mismo tipo de entidad definiendo los atributos del tipo de entidad que participa (0,1) en un dominio que pueda tomar valores nulos
+
+    Atributos de un mismo tipo de objeto que ha sido conveniente representarlos por separado
+
+Escoger 283. En el modelo Entidad-Interrelacion un tipo de interrelacion ternaria (0,1)-(?,n)-(?,n)...
+
+    Alguno de los tipos de entidad puede ser debil por identificacion
+
+    El tipo de entidad que participa con cardinalidades (0,1) puede verse como atributos del tipo de interrelacion (?,n)-(?,n) (solucion)
+
+    Ninguna es correcta
+
+    Deben ser descompuestas siempre en tipos de interrelaciones binarias
+
+Escoger 284. En el modelo Entidad-Interrelacion la especializacion...
+
+    Es una agregacion de entidades del supertipo
+
+    Es un refinamiento de entidades del supertipo
+
+    Es una clasificacion de entidades del supertipo
+
+    Es una instanciacion de entidades del supertipo (solucion)
+
+Escoger 285. El mecanismo de la abstraccion opuesto a la clasificacion...
+
+    Refina los objetos
+
+    Especializa objetos
+
+    Describe un posible conjunto de objetos, pero no crea esos objetos (solucion)
+
+    Crea objetos que antes o despues se pueden clasificar en el modelo
+
+Escoger 286. En el modelo en red:
+
+    Los atributos del tipo de registro System son automaticamente definidos por el sistema cuando se crea la base de datos
+
+    El diseñador define los atributos del tipo de registro System
+
+    El tipo de registro System solo contiene un atributo que es un puntero
+
+    Los atributos del tipo de registro System son definidos por el SGBD en base a los conjuntos DBTG en que participa (solucion)
+
+Escoger 287. Una dependencia multivaluada...
+
+    Es una dependencia funcional (solucion)
+
+    Es un conjunto de dependencias funcionales con un conjunto de valores
+
+    Es una dependencia de Fagin
+
+    Es un conjunto de dependencias funcionales conocido
+
+Escoger 288. En el modelo Entidad-Interrelacion una generalizacion...
+
+    Si se puede dar entre tipos de entidades que tengan los mismos identificadores candidatos (solucion)
+
+    No se puede dar entre tipos de entidades debiles
+
+    Ninguna es correcta
+
+    Si se puede dar entre tipos de entidades que compartar atributos
+
+Escoger 289. En el modelo Entidad-Interrelacion una especializacion parcial e inclusiva...
+
+    Representa que el atributo clasificador no puede tomar valores nulos
+
+    Representa que existe entidades del supertipo que no pueden especializarse (solucion)
+
+    Debe evitarse a toda costa por la inconsistencia que puede originar en la base de datos
+
+    Representa que el atributo clasificador puede tomar un numero de valores conocido
+
+Escoger 290. En el modelo relacional...
+
+    Dos tablas diferentes pueden tener los mismos atributos
+
+    Dos tablas diferentes pueden tener los mismos atributos pero diferente clave principal (solucion)
+
+    Dos tablas diferentes deben tener diferentes atributos
+
+    Dos tablas diferentes deben tener al menos un atributo diferente
+
+Escoger 291. En el modelo Entidad-Interrelacion...
+
+    Un rol es definido por el diseñador
+
+    Un rol es una descipcion de la semantica en un tipo de interrelacion (solucion)
+
+    Un rol describe lo que hace un tipo de entidad
+
+    Un rol es un texto
+
+Escoger 292. Las fases en el diseño de una base de datos relacional son:
+
+    El diseño conceptual, el diseño estructural y el diseño fisico
+
+    El diseño estructural, el diseño logico y el diseño de implementacion
+    
+    El diseño relacional y el diseño fisico
+
+    El diseño conceptual, el diseño logico y el diseño fisico (solucion)
+
+Escoger 293. En el modelo Entidad-Interrelacion un subtipo de entidad...
+
+    Puede especializarse por cualquier atributo (solucion)
+
+    Puede especializarse, pero considerando que no se solape con los otros subtipos
+
+    No puede especializarse a menos que se relacione con otros tipos de entidad y pueda asi especializarse las relaciones
+
+    No puede especializarse por el mismo atributo clasificador por la que existe
+
+Escoger 294. En el modelo relacional...
+
+    En una tabla el numero de claves candidatas sera menor que el numero de atributos
+
+    En una tabla el numero de claves alternas puede ser igual al numero de atributos
+
+    En una tabla todos los atributos pueden ser claves alternas 
+
+    En una tabla todos los atributos pueden ser claves candidatas (solucion)
+
+Escoger 295. En el modelo Entidad-Interrelacion...
+
+    Un dominio es un conjunto homogeneo (solucion)
+
+    Un dominio es un atributo
+
+    Los dominios no pueden ser complejos
+
+    Un dominio debe ser representado mediante un tipo de entidad
+
+Escoger 296. En el modelo relacional...
+
+    Un atributo que es clave foranea debe estar definido como clave principal en la misma u otra tabla (solucion)
+
+    Un atributo que es clave foranea debe estar definido como clave candidata
+
+    Un atributo que es clave foranea debe estar definido como clave candidata en cualquier tabla
+
+    Un atributo que es clave foranea puede estar definido como clave principal en la misma y otras tablas
+
+Escoger 297. En el modelo relacional, una dependencia funcional...
+
+    Se da cuando hay mas de un valor en los atributos compuestos de un agregado con otro atributo
+
+    No se puede dar entre atributos compuestos
+
+    Siempre se da entre atributos que forman parte de un agregado de atributos (solucion)
+
+    Se da entre atributos que tomar valores multiples
+
+Escoger 298. En el modelo relacional, una dependencia funcional no completa...
+
+    Ninguna es correcta (solucion)
+
+    Solo se da si los atributos son simples
+
+    Nunca se debe crear
+
+    Implica la existencia de atributos compuestos
+
+Escoger 299. El monitor del SGBD...
+
+    Posibilita la visualizacion de los datos correctamente
+
+    Puede ejecutarse en modo batch para aumentar el desempeño de la base de datos
+
+    Es un componente del diccionario de datos
+
+    Se encarga del procesamiento de las consultas de los usuarios (solucion)
+
+Escoger 300. En una generalizacion...
+
+    Siempre se puede detalle del supertipo
+
+    Siempre se incrementa la informacion del supertipo
+
+    Siempre se gana en detalle
+
+    Ninguna es correcta (solucion)
+
+    Siempre se pierde informacion del supertipo
+
+Escoger 301. En el modelo Entidad-Interrelacion...
+
+    Ninguna es correcta
+
+    Un tipo de interrelacion no es debil (solucion)
+
+    Un tipo de interrelacion debil por identificacion debe tener atributos para identificar los tipos de entidades debiles
+
+    Los tipos de interrelaciones son debiles o fuertes
+
+Escoger 302. En el modelo Entidad-Interrelacion los tipos de interrelaciones cuaternarias...
+
+    Su existencia es debido a errores de diseño
+
+    Ninguna es correcta (solucion)
+
+    No se admiten y deben ser descompuestas
+
+    Deben siempre convertirse en tipos de interrelaciones (1,1)-(?,n)
+
+Escoger 303. La tecnologica de bases de datos surge...
+
+    Por el coste de mantenimiento de la informacion (solucion)
+
+    Por la ausencia de buenos programadores para el nuevo hardware y software
+
+    Por la ausencia de buenos lenguajes para manejar los datos
+
+    Por el coste de mantenimiento del hardware y software
+
+Escoger 304. En el modelo Entidad-Interrelacion...
+
+    Se definen restricciones pero solo de dominio
+
+    Solo se pueden definir restricciones estaticas
+
+    Ninguna es correcta (solucion)
+
+    No se pueden definir restricciones
+
+Escoger 305. En el modelo Entidad-Interrelacion un tipo de interrelacion (?,1)-(?,n)...
+
+    Ambos tipos de entidades pueden ser fuertes (solucion)
+
+    No pueden darse en ningun caso
+
+    Implica debilidad
+
+    Uno de los tipos de entidad hereda el atributo identificador del otro tipo de entidad
+
+Escoger 306. En el modelo relacional, la integridad de referencia...
+
+    Obliga a que haya un atributo clave principal definido en el mismo dominio (solucion)
+
+    Obliga a que haya atributos que sean claves candidatas
+
+    Obliga a que haya atributos que no puedan tomar valores nulos
+
+    Obliga a que haya atributos que sean clave principal en otra tabla
+
+Escoger 307. La tecnologia de bases de datos surge debido a...
+
+    Aparecen los discos duros y se permite el acceso directo a los datos
+
+    Los datos eran dependientes del hardware (solucion)
+
+    Errores de diseño de los programadores
+
+    El software era muy costoso de mantener
+
+Escoger 308. La vision externa de los datos...
+
+    Debe crearse en primer lugar para garantizar que se desarrollen correctas aplicaciones de usuario
+
+    Es denominada esquema de la base de datos
+
+    Es siempre creada por el administrador de la base de datos
+
+    Puede haber múltiples (solucion)
+
+Escoger 309. Dadas las siguientes tablas:R1(a,b,c,d,e), R2(f,g,c)...
+
+    R2 es clave foránea de R1
+
+    R2 es clave foránea de R1 y NOT NULL
+
+    Dos tablas diferentes no pueden contener el mismo atributo
+
+    R1.c y R2.c deben estar definidos en el mismo dominio si se trata de un atributo derivado (solucion)
+
+Escoger 310. R1.c y R2.c deben estar definidos en el mismo dominio si se trata de un atributo derivado...
+
+    Las estructuras físicas son completamente diferentes a las de las bases de datos relacionales
+
+    Las estructuras físicas son ficheros planos
+
+    Ninguna es correcta (solucion)
+
+    Las estructuras físicas son completamente diferentes a las de las bases de datos en red
+
+Escoger 311. En el modelo Entidad-Interrelacion un supertipo de entidad con especializacion total...
+
+    El atributo clasificador toma dos o tres valores
+
+    Indica que se conocen claramente las características del supertipo
+
+    Puede convertirse en una especialización parcial
+
+    Debe ser siempre buscada por el diseñador para definir claramente la especializacion (solucion)
+
+Escoger 312. En el modelo relacional, la integridad de referencia...
+
+    Describe una relación 1:N entre tipos de entidades
+
+    Describe una relación de objetos pertenecientes al mismo o diferente conjunto (solucion)
+
+    Describe cualquier tipo de relación entre tipos de objetos diferentes
+
+    Describe un conjunto, pues puede crearse una tabla para representarla y mantenerla
+
+Escoger 313. En el modelo Entidad-Interrelacion un tipo de interrelacion (?,n)-(?,n)...
+
+    Ninguna de las otras respuestas son correctas
+
+    Deben siempre convertirse en todos tipos de interrelaciones (1,1)-(?,n) y (1,1)-(?,n)
+
+    Se debe crear un tipo de entidad débil por identificación
+
+    Implica la no existencia de debilidad (solucion)
+
+Escoger 314. En el modelo Entidad-Interrelacion...
+
+    Dos tipos de entidades pueden representar el mismo tipo de objeto del mundo real si tienen diferentes atributos pero los mismos identificadores candidatos
+
+    Dos tipos de entidades pueden nunca representar el mismo tipo de objeto del mundo real
+
+    Dos tipos de entidades pueden representar el mismo tipo de objeto del mundo real si tienen diferentes identificadores
+
+    Dos tipos de entidades pueden representar el mismo tipo de objeto del mundo real si tienen diferentes atributos pero comparten el identificador principal (solucion)
+
+Escoger 315. La aplicacion de la FN3...
+
+    Elimina redundancia pues aumenta el desempeño (solucion)
+
+    Elimina redundancia pues disminuye el número futuro de tuplas
+
+    No elimina redundancia pues aumenta el número de tablas
+
+    No elimina redundancia, pero si aumenta el desempeño
+
+Escoger 316. En el modelo Entidad-Interrelacion los subtipos de entidad...
+
+    Son exclusivos en base a que hay un atributo que sólo puede tomar dos valores
+
+    Son exclusivos cuando el atributo clasificador sólo toma un valor diferente para cada subtipo (solucion)
+
+    Son exclusivos cuando tienen atributos diferentes
+
+    Son exclusivos cuando el atributo clasificador sólo toma dos valores
+
+Escoger 317. Si se acaba de crear la tabla R(a,b,c,d) y se realiza una seleccion de todos los valores del atributo a
+
+    se genera una tabla vacia con el esquema de R
+
+    Se genera una tabla vacía con el esquema "a" (solucion)
+
+    Se produce un error porque la tabla no tienen tuplas y no hay valors para el atributo "a"
+
+    se genera una tabla vacia con el esquema de R
+
+Escoger 318. La diferencia de dos tablas..
+
+    No es conmutativa (solucion)
+
+    Es compatible
+
+    Es una suma pero poniendo una de las tablas en negativo
+
+    Tiene que hacerse antes que la suma para disminuir el número de tuplas
+
+Escoger 319. Dada la siguiente informacion: R1(a,b,c,d,e) siendo R1.d clave candidata
+
+    Obligatoriamente la clave principal debería ser de R1.d (solucion)
+
+    Ninguna de las otras respuestas es correcta
+
+    Existe un grave error de diseño
+
+    No se puede dar este caso a no ser que R1 provenga de un tipo de entidad debil por identicación
+
+Escoger 320. En el modelo relacional ...
+
+    Los atributos deben tener nombre diferente
+
+    Los atributos de una tabla deben tener el mismo nombre que los atributos del tipo de entidad
+
+    Los atributos de esquemas diferentes deben tener diferente nombre
+
+    Los atributos pueden tener el mismo nombre en tablas diferentes (solucion)
+
+Escoger 321. En un refinamiento...
+
+    Ninguna de las anteriores
+
+    Se especifican las propiedades de los tipos de objetos
+
+    Se especializan tipos de objetos
+
+    Se especifican las propiedades de entidades (solucion)
+
+Escoger 322. En el modelo Entidad-Interrelación dos tipos de entidades relacionadas con cardinalidad (1,1)-(1,1) y con el mismo identificador ...
+
+    Describe un tipo de entidad cuyos atributos es conveniente describirlos por separado
+
+    No pueden darse este tipo de relaciones y se trata de un error de diseño (solucion)
+
+    Deben unirse en un mismo tipo de entidad
+
+    Debe tener un identificador candidato común
+
+Escoger 323. En el modelo Entidad-Interrelacion...
+
+    Un atributo identificador no puede ser compuesto
+
+    Un atributo identificador puede ser compuesto y/o múltiple pues puede estar formado por varios atributos
+
+    Un atributo identificador puede ser compuesto, pero no múltiple (solucion)
+
+    Un atributo identificador de ser siempre fijo y no cambiar
+
+Escoger 324. En el modelo Entidad-Interrelacion un tipo de interrelacion (?,n)-(?,n) caracterizada por el atributo multiple "a"...
+
+    El atributo “a” siempre pasará formar parte de un nuevo tipo de entidad
+
+    Es un error de diseño
+
+    La cardinalidad del atributo “a” puede ser cualquiera (solucion)
+
+    Ninguna de las otras respuestas es correcta
+
+Escoger 325. El refinamiento supone...
+
+    Determinar las instancias de un objeto
+
+    Especializar supertipos
+
+    Determinar las propiedades de los objetos (solucion)
+
+Escoger 326. En el modelo Entidad-Interrelacion cuando un tipo de entidad tiene un atributo multiple...
+
+    Se trata como un tipo de entidad débil por identificación
+
+    Se debe convertir en muchos atributos simples
+
+    Hay que crear otro tipo de entidad
+
+    Se debe definir su cardinalidad y dominio (solucion)
+
+Escoger 327. En el modelo Entidad-Interrelacion dos tipos de entidades relacionadas con la cardinalidad (1,1)-(1,1) y compartiendo el mismo identificador principal...
+
+    Representan propiedades de un mismo objeto separadas para una mejor representación (solucion)
+
+    Pueden representar cualquier tipo de objeto y relación consigo mismo
+
+    Ninguna de las otras respuestas es correcta
+
+    Representan a un mismo objeto que esta relacionado consigo mismo
+
+Escoger 328. El diseño conceptual de una base de datos es elaborado por el SGBD elegido por el usuario
+
+    Ninguna es correcta (solucion)
+
+    Al mismo tiempo que se realiza el modelado lógico
+
+    Teniendo en cuenta el modelo en que se basa el SGBD
+
+    Siempre antes de realizar el diseño lógico
+
+Escoger 329. Los modelos de datos...
+
+    Son interpretados por el SGBD, dependiente del modelo (solucion)
+
+    Son definidos por el SGBD, encargado de manejar los objetos
+
+    Generan una estructura lógica y física de la base de datos
+
+    No pueden describir las restricciones de dominio de un problema
+
+Escoger 330. La suma de dos tablas
+
+    Puede dar una tabla sin tuplas (solucion)
+
+    Las tablas se concatenan y asi se puede hacer sin error
+
+    No puede dar tablas vacías pues se borraria la tabla
+
+    Nunca da un error
+
+Escoger 331. Cuando un programa de aplicacion abre la base de datos...
+
+    La ligadura se realizará o no en base a las características de DGBD y gestión de la base de datos (solucion)
+
+    Siempre realiza la ligadura lógica, pero no la física
+
+    La ligadura se pierde hasta que se cierra el programa
+
+    siempre realiza la ligadura lógica 
+
+Escoger 332. En el modelo en red...
+
+    Los registros de un tipo de registro pueden tener múltiples ordenaciones (solucion)
+
+    Los registros de un tipo de registro no tiene orden
+
+    Los registros de un tipo de registro se ordenan siempre por una clave principal
+
+    Los registros de un tipo de registro se ordenan en base al DBTG en que participa
+
+Escoger 333. IMS son las siglas de:
+
+    Un SGBD (solucion)
+
+    Una base de datos creada para el proyecto Apolo
+
+    Una marca registrada de base de datos
+
+    Una base de datos jerárquica
+
+Escoger 334. En el modelo EE-R...
+
+    Es un tipo de entidad o un tipo de interrelación (solucion)
+
+    Es únicamente tipo de entidad con nombre único y diferente a otros tipos de entidades
+
+    Un conjunto es descrito como una entidad o su relación con otra entidad
+
+    Los conjuntos no se utilizan, en el modelo relacional si, definiéndolos como tablas
+
+Escoger 335. Mediante el refinamiento...
+
+    Describimos objetos simples o propiedades  (solucion)
+
+    Refinamos los tipos de objetos en subtipos
+
+    Creamos los objetos elementales del modelo
+
+    Refinamos un modelo para que sea simple de entender  
+
+Escoger 336. En el modelo Entidad-Interrelacion...
+
+    Un tipo de interrelación no se relaciona con otro tipo de interrelación (solucion)
+
+    Un tipo de interrelación debe ser siempre representado por un nombre que describe los tipos de entidades implicados 
+
+    Un tipo de interrelación se puede relacional con 0, 1 o varios tipos de interrelaciones 
+
+    Un tipo de interrelacion define la extension de una parte del modelo 
+
+Escoger 337. En el modelo Entidad-Interrelacion...
+
+    Los atributos derivados pueden afectar a una o varias entidades de otro tipo (solucion)
+
+    Siempre debe haber una relación entre entidades para que una de ellas tenga un atributo derivado
+
+    Los atributos derivados siempre implican un cálculo 
+
+    Los atributos derivados requieren de una debilidad de existencia 
+
+Escoger 338. En las bases de datos actuales...
+
+    La independencia es máxima
+
+    No existe redundancia
+
+    La información está totalmente asegurada por el SGBD
+
+    La independencia y redundancia son un problema
+
+Escoger 339. En una instanciacion...
+
+    Los subtipos son registros
+
+    El supertipo son instancias
+
+    Los subtipos son atributos
+
+    Los subtipos son entidades
+
+Escoger 340. Un archivo o conjunto de archivos que contienen multiples informaciones que, de alguna forma, guardan relacion es:
+
+    Una base de datos
+
+    Una aplicación informática para el manejo de bases de datos
+
+    Un Sistema Gestor de Bases de Datos (SGBD)
+
+    Ninguna de las anteriores
+
+Escoger 341. La ligadura...
+
+    Afecta a la visión lógica de los datos
+
+    Es definida en la visión lógica y física
+
+    Determina la fiabilidad de la base de datos
+
+    Afecta al desempeño de la base de datos
+
+Escoger 342. En una especializacion...
+
+    Los subtipos son instancias
+
+    Los subtipos su siempre supertipos
+
+    El supertipo es una instancias
+
+    Los subtipos son atributos
+
+Escoger 343. En el modelo jerarquico...
+
+    
