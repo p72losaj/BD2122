@@ -5,14 +5,27 @@ pondrá el segundo apellido y el siguiente más joven pondrá el primer apellido
 */
 
 set serveroutput on
+
 declare
-apellido2 votantes.nombrecompleto%type;
-apellido1 votantes.nombrecompleto%type;
+    apellido1 VARCHAR2(64);
+    apellido2 VARCHAR2(64);
 begin
-select substr(nombrecompleto,instr(nombrecompleto,' '),8) into apellido2
-from votantes where fechanacimiento = (select max(fechanacimiento) from votantes);
-select substr(nombrecompleto,instr(nombrecompleto,' '),5) into apellido1
-from votantes where fechanacimiento = (select max(fechanacimiento) from votantes
-where fechanacimiento < (select max(fechanacimiento) from votantes));
-dbms_output.put_line('El hijo se llama Juan ' || apellido1 || apellido2);
+    -- Apellido del segundo votante mas joven
+    select substr(nombrecompleto,
+              INSTR(nombrecompleto,' ')+1,
+              INSTR(nombrecompleto,' ',1,2)-INSTR(nombrecompleto,' ')) 
+    into apellido1
+    from votantes
+    where fechanacimiento = (select max(fechanacimiento) from votantes
+                            where fechanacimiento < (select max(fechanacimiento) from votantes) );
+    -- Apellido del votante mas joven
+    select substr(nombrecompleto,
+              INSTR(nombrecompleto,' ')+1,
+              INSTR(nombrecompleto,' ',1,2)-INSTR(nombrecompleto,' '))
+    into apellido2      
+    from votantes
+    where fechanacimiento = (select max(fechanacimiento) from votantes);
+
+    dbms_output.put_line('El hijo se llama Juan ' || apellido1 || apellido2);
 end;
+
